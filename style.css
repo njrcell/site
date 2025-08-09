@@ -1,30 +1,80 @@
-body { margin:0; font-family:sans-serif; color:#333; }
-.hero {
-  background: linear-gradient(135deg,#0066ff,#00ccff);
-  color:white; text-align:center; padding:60px 20px;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+    text-align: center;
 }
-.hero h1 { font-size:2.5em; margin:0; }
-.hero p { margin:10px 0 0; font-size:1.2em; }
 
+/* HEADER */
+header {
+    background: #ff6600;
+    color: white;
+    padding: 15px;
+}
+header .logo {
+    width: 80px;
+    height: auto;
+}
+header h1 {
+    margin: 5px 0;
+}
+
+/* BANNER */
+.banner img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+/* MENU LAYANAN */
 .services {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
-  gap:10px;
-  padding:30px 20px;
+    padding: 20px;
 }
-.service {
-  background:#f2f2f2; padding:15px; border-radius:6px;
-  text-align:center; font-weight:500;
+.services h2 {
+    margin-bottom: 15px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+}
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card i {
+    font-size: 30px;
+    color: #ff6600;
+    margin-bottom: 10px;
 }
 
-.cta { text-align:center; padding:20px; }
-.btn {
-  background:#25d366; color:white; padding:15px 30px;
-  border-radius:30px; text-decoration:none;
-  font-size:1em; font-weight:600;
+/* WHATSAPP BUTTON */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.whatsapp-float a {
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
+/* FOOTER */
 footer {
-  background:#222; color:#ddd; text-align:center;
-  padding:15px; font-size:0.9em;
+    background: #333;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
 }
