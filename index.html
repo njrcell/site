@@ -3,66 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NJR CELL</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- =================================================================== -->
+    <!-- META SEO UTAMA - LENGKAP                                            -->
+    <!-- =================================================================== -->
+    <title>NJR Cell - Jasa Transfer, Tarik Tunai & Harga Voucher di Pemalang</title>
+    <meta name="description" content="NJR Cell melayani jasa transfer, tarik tunai, dan top up e-wallet. Tersedia juga daftar harga voucher dan kartu perdana terbaru di 2 lokasi: Sukajadi & Ciherang.">
+    <meta name="keywords" content="jasa transfer uang pemalang, tarik tunai pemalang, harga voucher pemalang, kartu perdana pemalang, agen brilink pemalang, njr cell sukajadi, njr cell ciherang">
+    <meta name="author" content="NJR Cell">
+    <link rel="canonical" href="https://njrcell.github.io/site/">
+
+    <!-- META OPEN GRAPH - LOGO BARU -->
+    <meta property="og:title" content="NJR Cell - Layanan Keuangan & Produk Digital (2 Lokasi)">
+    <meta property="og:description" content="Lihat layanan unggulan, harga voucher terbaru, dan temukan lokasi terdekat Anda.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://njrcell.github.io/site/njrcell.png">
+    <meta property="og:url" content="https://njrcell.github.io/site/">
+
+    <!-- SCHEMA MARKUP (JSON-LD) - LOGO BARU -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "NJR Cell",
+      "description": "Toko layanan keuangan dan produk telekomunikasi di Pemalang dengan dua cabang.",
+      "image": "https://njrcell.github.io/site/njrcell.png",
+      "url": "https://njrcell.github.io/site/",
+      "telephone": "+6285320000303",
+      "priceRange": "Rp 5.000 - Rp 1.000.000",
+      "subOrganization": [
+        {
+          "@type": "Store",
+          "name": "NJR Cell Sukajadi",
+          "telephone": "+6285320000303",
+          "hasMap": "https://maps.app.goo.gl/6CxYeq6XHbfYevfD6"
+        },
+        {
+          "@type": "Store",
+          "name": "NJR Cell Ciherang",
+          "telephone": "+6283120000303",
+          "hasMap": "https://maps.app.goo.gl/wi92DpnoMioX5m4aA"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Memuat Tailwind CSS & Google Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #f0f2f5; }
+        .main-container { background-color: #ffffff; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+        .branch-card { background-color: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 1.5rem; }
+        .product-card { background-color: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 1rem; }
+        .featured-product-card { background-color: #f8f9fa; border-radius: 12px; padding: 1rem; text-align: center; }
+        .link-button { transition: transform 0.2s ease, box-shadow 0.2s ease; border-radius: 8px; font-weight: 600; display: flex; align-items: center; justify-content: center; padding: 12px; color: white; text-decoration: none; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .link-button:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.15); }
+        .link-button .icon { width: 20px; height: 20px; margin-right: 10px; }
+        .price-list li { display: flex; justify-content: space-between; padding: 0.5rem 0.25rem; border-bottom: 1px solid #e9ecef; font-size: 0.9rem; }
+        .price-list li:last-child { border-bottom: none; }
+    </style>
 </head>
-<body>
+<body class="flex items-center justify-center min-h-screen p-4">
 
-    <!-- HEADER -->
-    <header>
-        <img src="njrcell.png" alt="NJR CELL Logo" class="logo">
-        <h1>NJR CELL</h1>
-        <p>Desa Ciherang & Desa Sukajadi</p>
-    </header>
+    <main class="w-full max-w-md mx-auto text-center">
+        <div class="main-container p-6">
+            <header class="mb-6">
+                <!-- =================================================================== -->
+                <!-- LOGO SUDAH DIGANTI DENGAN FILE ANDA                             -->
+                <!-- =================================================================== -->
+                <img class="w-28 h-28 rounded-full object-cover mx-auto mb-4" src="njrcell.png" alt="Logo NJR Cell">
+                <h1 class="text-3xl font-bold text-gray-900">NJR CELL</h1>
+                <p class="text-gray-600 mt-1 font-medium">Layanan Keuangan & Produk Digital</p>
+            </header>
 
-    <!-- BANNER -->
-    <section class="banner">
-        <img src="imgbanner.jpg" alt="Promo NJR CELL">
-    </section>
+            <section class="mb-6">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">Layanan Utama Kami</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <div class="featured-product-card">
+                        <svg class="w-8 h-8 mx-auto mb-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        <h3 class="font-semibold text-sm text-gray-700">Tarik Tunai</h3>
+                        <p class="text-xs text-gray-500 mt-1">Saldo e-wallet jadi uang tunai? Bisa!</p>
+                    </div>
+                    <div class="featured-product-card">
+                        <svg class="w-8 h-8 mx-auto mb-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <h3 class="font-semibold text-sm text-gray-700">Transfer Uang</h3>
+                        <p class="text-xs text-gray-500 mt-1">Kirim ke bank manapun, tanpa antre.</p>
+                    </div>
+                    <div class="featured-product-card">
+                        <svg class="w-8 h-8 mx-auto mb-2 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                        <h3 class="font-semibold text-sm text-gray-700">Top Up Saldo</h3>
+                        <p class="text-xs text-gray-500 mt-1">Isi saldo e-wallet lengkap & cepat.</p>
+                    </div>
+                </div>
+            </section>
 
-    <!-- MENU LAYANAN -->
-    <section class="services">
-        <h2>Layanan Kami</h2>
-        <div class="grid">
-            <div class="card">
-                <i class="fa-solid fa-mobile-screen-button"></i>
-                <p>Pulsa & Paket Data</p>
-            </div>
-            <div class="card">
-                <i class="fa-solid fa-bolt"></i>
-                <p>Token PLN</p>
-            </div>
-            <div class="card">
-                <i class="fa-solid fa-id-card"></i>
-                <p>BPJS</p>
-            </div>
-            <div class="card">
-                <i class="fa-solid fa-wallet"></i>
-                <p>Top Up E-Wallet</p>
-            </div>
-            <div class="card">
-                <i class="fa-solid fa-gamepad"></i>
-                <p>Voucher Game</p>
-            </div>
-            <div class="card">
-                <i class="fa-solid fa-globe"></i>
-                <p>Internet Roaming</p>
+            <hr class="my-6">
+
+            <section class="mb-6">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">Daftar Harga Produk</h2>
+                <p class="text-xs text-gray-500 mb-4">Update Terakhir: <span id="last-updated"></span></p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="product-card">
+                        <h3 class="font-semibold text-gray-700 mb-2">Kartu Perdana</h3>
+                        <ul class="price-list text-left" id="list-kartu-perdana"></ul>
+                    </div>
+                    <div class="product-card">
+                        <h3 class="font-semibold text-gray-700 mb-2">Voucher Internet</h3>
+                        <ul class="price-list text-left" id="list-voucher-internet"></ul>
+                    </div>
+                </div>
+            </section>
+            
+            <hr class="my-6">
+            
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Pilih Lokasi Cabang</h2>
+            <div class="space-y-6">
+                <div class="branch-card">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">Cabang Sukajadi</h3>
+                    <div class="space-y-3">
+                        <a href="https://wa.me/6285320000303" target="_blank" class="link-button" style="background-color: #25D366;"><img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon"><span>WhatsApp Sukajadi</span></a>
+                        <a href="https://maps.app.goo.gl/6CxYeq6XHbfYevfD6" target="_blank" class="link-button" style="background-color: #4285F4;"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg><span>Peta Lokasi Sukajadi</span></a>
+                    </div>
+                </div>
+                <div class="branch-card">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">Cabang Ciherang</h3>
+                    <div class="space-y-3">
+                        <a href="https://wa.me/6283120000303" target="_blank" class="link-button" style="background-color: #25D366;"><img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon"><span>WhatsApp Ciherang</span></a>
+                        <a href="https://maps.app.goo.gl/wi92DpnoMioX5m4aA" target="_blank" class="link-button" style="background-color: #4285F4;"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg><span>Peta Lokasi Ciherang</span></a>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+        
+        <footer class="mt-6 text-sm text-gray-500">
+            <p>&copy; <span id="year"></span> NJR Cell. Semua Hak Cipta Dilindungi.</p>
+        </footer>
+    </main>
 
-    <!-- TOMBOL WHATSAPP -->
-    <div class="whatsapp-float">
-        <a href="https://wa.me/6282120000303" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-    </div>
+    <script>
+        // CARA UPDATE HARGA: Cukup ubah nama produk dan harga di bawah ini.
+        const daftarHarga = {
+            kartuPerdana: [
+                { nama: 'Telkomsel 5GB', harga: 'Rp 25.000' },
+                { nama: 'Indosat 10GB', harga: 'Rp 35.000' },
+                { nama: 'XL Axiata 8GB', harga: 'Rp 30.000' },
+                { nama: 'Smartfren 20GB', harga: 'Rp 50.000' }
+            ],
+            voucherInternet: [
+                { nama: 'Voucher Telkomsel 3GB', harga: 'Rp 15.000' },
+                { nama: 'Voucher Indosat 7GB', harga: 'Rp 25.000' },
+                { nama: 'Voucher XL 5GB', harga: 'Rp 22.000' },
+                { nama: 'Voucher Axis 2GB', harga: 'Rp 12.000' }
+            ]
+        };
 
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2025 NJR CELL. Semua Hak Dilindungi.</p>
-    </footer>
+        function tampilkanHarga() {
+            const listKartu = document.getElementById('list-kartu-perdana');
+            const listVoucher = document.getElementById('list-voucher-internet');
+            listKartu.innerHTML = '';
+            listVoucher.innerHTML = '';
+            daftarHarga.kartuPerdana.forEach(item => { listKartu.innerHTML += `<li><span>${item.nama}</span><span class="font-semibold">${item.harga}</span></li>`; });
+            daftarHarga.voucherInternet.forEach(item => { listVoucher.innerHTML += `<li><span>${item.nama}</span><span class="font-semibold">${item.harga}</span></li>`; });
+        }
 
+        function tampilkanTanggalUpdate() {
+            const today = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('last-updated').textContent = today.toLocaleDateString('id-ID', options);
+        }
+
+        window.onload = function() {
+            tampilkanHarga();
+            tampilkanTanggalUpdate();
+            document.getElementById('year').textContent = new Date().getFullYear();
+        };
+    </script>
 </body>
 </html>
