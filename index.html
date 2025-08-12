@@ -9,6 +9,33 @@
     <title>NJR Cell | Transaksi Online 24 Jam</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Semua gambar responsif */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Logo */
+        .logo {
+            max-width: 150px;
+            height: auto;
+            margin-top: 10px;
+        }
+
+        /* Banner */
+        .banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
         /* Tombol emas */
         .btn {
             display: inline-block;
@@ -18,25 +45,14 @@
             text-decoration: none;
             border-radius: 8px;
             font-weight: bold;
-            text-align: center;
+            margin: 5px;
             transition: background 0.3s ease;
         }
         .btn:hover {
-            background: #d4af37; /* emas tua */
+            background: #e6b800;
         }
-        /* Grid menu */
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            margin: 20px 0;
-        }
-        @media (max-width: 768px) {
-            .menu-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        /* Sosmed */
+
+        /* Sosmed logo */
         .social-icons img {
             width: 40px;
             height: 40px;
@@ -46,14 +62,29 @@
         .social-icons img:hover {
             transform: scale(1.1);
         }
-        /* Map */
+
+        /* Map section */
         .map-section {
             margin: 20px 0;
         }
         .map-section img {
-            max-width: 100%;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        /* Menu grid untuk PC & HP */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background: #f1f1f1;
         }
     </style>
 </head>
@@ -73,20 +104,20 @@
 
     <!-- MENU UTAMA -->
     <section class="services">
-        <h2>Layanan Transaksi</h2>
+        <h2>Transaksi Online 24 JAM</h2>
         <div class="menu-grid">
-            <a href="https://buylink.id/njrcell" class="btn" target="_blank">Pulsa</a>
-            <a href="https://buylink.id/njrcell" class="btn" target="_blank">Paket Data</a>
-            <a href="https://buylink.id/njrcell" class="btn" target="_blank">Paket Telpon</a>
-            <a href="https://buylink.id/njrcell" class="btn" target="_blank">Token Listrik</a>
-            <a href="https://buylink.id/njrcell" class="btn" target="_blank">Voucher Game</a>
-            <a href="https://buylink.id/njrcell" class="btn" target="_blank">E-Wallet</a>
-            <a href="https://buylink.id/njrcell" class="btn" target="_blank">TV & Internet</a>
-            <a href="https://buylink.id/njrcell" class="btn" target="_blank">Bayar Tagihan</a>
-            <a href="https://api.whatsapp.com/send?phone=6282120000303&text=pesan%20pelindung%20layar%20hydrogel%20untuk%20HP%20tipe%20..." class="btn" target="_blank">Pesan Pelindung Layar</a>
-            <a href="https://api.whatsapp.com/send?phone=6282120000303&text=pesan%20Garskin%20untuk%20HP%20tipe%20..." class="btn" target="_blank">Garskin</a>
-            <a href="https://api.whatsapp.com/send?phone=6282120000303&text=Mau%20transfer%20ke%20Bank%20..." class="btn" target="_blank">Transfer</a>
-            <a href="https://api.whatsapp.com/send?phone=6282120000303&text=Tarik%20Tunai%20dari%20Bank%20..." class="btn" target="_blank">Tarik Tunai</a>
+            <a href="https://buylink.id/njrcell" target="_blank" class="btn">Pulsa</a>
+            <a href="https://buylink.id/njrcell" target="_blank" class="btn">Paket Data</a>
+            <a href="https://buylink.id/njrcell" target="_blank" class="btn">Paket Telpon</a>
+            <a href="https://buylink.id/njrcell" target="_blank" class="btn">Token Listrik</a>
+            <a href="https://buylink.id/njrcell" target="_blank" class="btn">Voucher Game</a>
+            <a href="https://buylink.id/njrcell" target="_blank" class="btn">E-Wallet</a>
+            <a href="https://buylink.id/njrcell" target="_blank" class="btn">TV & Internet</a>
+            <a href="https://buylink.id/njrcell" target="_blank" class="btn">Bayar Tagihan</a>
+            <a href="https://api.whatsapp.com/send?phone=6282120000303&text=pesan%20pelindung%20layar%20hydrogel%20untuk%20HP%20tipe%20..." target="_blank" class="btn">Pesan Pelindung Layar</a>
+            <a href="https://api.whatsapp.com/send?phone=6282120000303&text=pesan%20Garskin%20untuk%20HP%20tipe%20..." target="_blank" class="btn">Garskin</a>
+            <a href="https://api.whatsapp.com/send?phone=6282120000303&text=Mau%20transfer%20ke%20Bank%20..." target="_blank" class="btn">Transfer</a>
+            <a href="https://api.whatsapp.com/send?phone=6282120000303&text=Tarik%20Tunai%20dari%20Bank%20..." target="_blank" class="btn">Tarik Tunai</a>
         </div>
     </section>
 
@@ -108,6 +139,12 @@
         </a>
         <br>
         <a href="https://api.whatsapp.com/send/?phone=6283120000303" class="btn" target="_blank">WhatsApp Ciherang</a>
+    </section>
+
+    <!-- PRODUK -->
+    <section class="services">
+        <h2>Produk Pelindung Handphone</h2>
+        <a href="https://njrcellciherang.my.canva.site/hydrogel" class="btn" target="_blank">Lihat Produk</a>
     </section>
 
     <!-- SOSIAL MEDIA -->
