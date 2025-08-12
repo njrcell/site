@@ -52,27 +52,34 @@ header h1 {
 }
 .card i {
     font-size: 30px;
-    color: #ff6600;
     margin-bottom: 10px;
 }
 
-/* TOMBOL UMUM */
+/* Tombol Hijau Neon */
 .btn {
-    display: inline-block;
-    background: #ff6600;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
+    display: block;
     text-decoration: none;
+    color: white;
+    background: #39ff14; /* Hijau neon */
+    border-radius: 10px;
+    padding: 15px;
     font-weight: bold;
-    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.2s, background 0.2s;
 }
 .btn:hover {
-    background: #e55a00;
     transform: scale(1.05);
+    background: #32cd10; /* Hijau neon sedikit gelap saat hover */
 }
 
-/* WHATSAPP BUTTON FLOAT */
+/* MAP */
+.map {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/* WHATSAPP BUTTON */
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
