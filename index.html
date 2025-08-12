@@ -3,45 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NJR Cell - Transaksi Online 24 Jam, Pulsa, Paket Data, PLN, Token, TopUp Game, Transfer & Tarik Tunai Bank/E-Wallet Tarif Murah!">
+    <meta name="keywords" content="NJR Cell, pulsa online, paket data, token PLN, topup game, transfer bank, tarik tunai, agen mandiri">
+    <meta name="author" content="NJR Cell">
     <title>NJR Cell | Transaksi Online 24 Jam</title>
     <link rel="stylesheet" href="style.css">
     <style>
         /* Tombol emas */
-        .btn-gold {
-            display: block;
+        .btn {
+            display: inline-block;
             background: gold;
             color: black;
-            padding: 12px;
+            padding: 12px 20px;
             text-decoration: none;
             border-radius: 8px;
             font-weight: bold;
             text-align: center;
             transition: background 0.3s ease;
         }
-        .btn-gold:hover {
-            background: #d4af37; /* warna emas tua saat hover */
+        .btn:hover {
+            background: #d4af37; /* emas tua */
         }
-
-        /* Grid tombol */
+        /* Grid menu */
         .menu-grid {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(2, 1fr);
             gap: 10px;
-            padding: 15px;
+            margin: 20px 0;
         }
-        @media (min-width: 768px) {
+        @media (max-width: 768px) {
             .menu-grid {
-                grid-template-columns: 1fr 1fr;
-                max-width: 650px;
-                margin: auto;
+                grid-template-columns: 1fr;
             }
         }
-
-        /* Map & Sosmed */
-        .map-section img {
-            max-width: 100%;
-            border-radius: 10px;
-        }
+        /* Sosmed */
         .social-icons img {
             width: 40px;
             height: 40px;
@@ -51,68 +46,83 @@
         .social-icons img:hover {
             transform: scale(1.1);
         }
+        /* Map */
+        .map-section {
+            margin: 20px 0;
+        }
+        .map-section img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <img src="njrcell.png" alt="Logo NJR Cell" class="logo">
-    <h1>NJR Cell</h1>
-    <p>Transaksi Online 24 JAM - Murah, Cepat & Aman</p>
-</header>
+    <!-- HEADER -->
+    <header>
+        <img src="njrcell.png" alt="Logo NJR Cell" class="logo">
+        <h1>NJR Cell</h1>
+        <p>Transaksi Online 24 JAM - Murah, Cepat & Aman</p>
+    </header>
 
-<section class="banner">
-    <img src="imgbanner.png" alt="Banner Agen Mandiri NJR Cell">
-</section>
+    <!-- BANNER -->
+    <section class="banner">
+        <img src="imgbanner.png" alt="Banner Agen Mandiri NJR Cell">
+    </section>
 
-<section class="services">
-    <h2>Menu Layanan</h2>
-    <div class="menu-grid">
-        <a href="https://buylink.id/njrcell" target="_blank" class="btn-gold">Pulsa</a>
-        <a href="https://buylink.id/njrcell" target="_blank" class="btn-gold">Paket Data</a>
-        <a href="https://buylink.id/njrcell" target="_blank" class="btn-gold">Paket Telpon</a>
-        <a href="https://buylink.id/njrcell" target="_blank" class="btn-gold">Token Listrik</a>
-        <a href="https://buylink.id/njrcell" target="_blank" class="btn-gold">Voucher Game</a>
-        <a href="https://buylink.id/njrcell" target="_blank" class="btn-gold">E-Wallet</a>
-        <a href="https://buylink.id/njrcell" target="_blank" class="btn-gold">TV & Internet</a>
-        <a href="https://buylink.id/njrcell" target="_blank" class="btn-gold">Bayar Tagihan</a>
-        <a href="https://api.whatsapp.com/send?phone=6282120000303&text=pesan%20pelindung%20layar%20hydrogel%20untuk%20HP%20tipe%20..." target="_blank" class="btn-gold">Pesan Pelindung Layar</a>
-        <a href="https://api.whatsapp.com/send?phone=6282120000303&text=pesan%20Garskin%20untuk%20HP%20tipe%20..." target="_blank" class="btn-gold">Garskin</a>
-        <a href="https://api.whatsapp.com/send?phone=6282120000303&text=Mau%20transfer%20ke%20Bank%20..." target="_blank" class="btn-gold">Transfer</a>
-        <a href="https://api.whatsapp.com/send?phone=6282120000303&text=Tarik%20Tunai%20dari%20Bank%20..." target="_blank" class="btn-gold">Tarik Tunai</a>
-    </div>
-</section>
+    <!-- MENU UTAMA -->
+    <section class="services">
+        <h2>Layanan Transaksi</h2>
+        <div class="menu-grid">
+            <a href="https://buylink.id/njrcell" class="btn" target="_blank">Pulsa</a>
+            <a href="https://buylink.id/njrcell" class="btn" target="_blank">Paket Data</a>
+            <a href="https://buylink.id/njrcell" class="btn" target="_blank">Paket Telpon</a>
+            <a href="https://buylink.id/njrcell" class="btn" target="_blank">Token Listrik</a>
+            <a href="https://buylink.id/njrcell" class="btn" target="_blank">Voucher Game</a>
+            <a href="https://buylink.id/njrcell" class="btn" target="_blank">E-Wallet</a>
+            <a href="https://buylink.id/njrcell" class="btn" target="_blank">TV & Internet</a>
+            <a href="https://buylink.id/njrcell" class="btn" target="_blank">Bayar Tagihan</a>
+            <a href="https://api.whatsapp.com/send?phone=6282120000303&text=pesan%20pelindung%20layar%20hydrogel%20untuk%20HP%20tipe%20..." class="btn" target="_blank">Pesan Pelindung Layar</a>
+            <a href="https://api.whatsapp.com/send?phone=6282120000303&text=pesan%20Garskin%20untuk%20HP%20tipe%20..." class="btn" target="_blank">Garskin</a>
+            <a href="https://api.whatsapp.com/send?phone=6282120000303&text=Mau%20transfer%20ke%20Bank%20..." class="btn" target="_blank">Transfer</a>
+            <a href="https://api.whatsapp.com/send?phone=6282120000303&text=Tarik%20Tunai%20dari%20Bank%20..." class="btn" target="_blank">Tarik Tunai</a>
+        </div>
+    </section>
 
-<section class="map-section">
-    <h2>NJR Cell Sukajadi</h2>
-    <a href="https://maps.app.goo.gl/kwNbie566DpopYBGA" target="_blank">
-        <img src="njrsukajadi.png" alt="Lokasi NJR Cell Sukajadi">
-    </a>
-    <br>
-    <a href="https://api.whatsapp.com/send/?phone=6285320000303" class="btn-gold" target="_blank">WhatsApp Sukajadi</a>
-</section>
-
-<section class="map-section">
-    <h2>NJR Cell Ciherang</h2>
-    <a href="https://maps.app.goo.gl/m4d9JoxcXCYds6ep6" target="_blank">
-        <img src="njrciherang.png" alt="Lokasi NJR Cell Ciherang">
-    </a>
-    <br>
-    <a href="https://api.whatsapp.com/send/?phone=6283120000303" class="btn-gold" target="_blank">WhatsApp Ciherang</a>
-</section>
-
-<footer>
-    <h3>Ikuti Kami</h3>
-    <div class="social-icons">
-        <a href="https://www.instagram.com/njrcell88" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram NJR Cell">
+    <!-- LOKASI SUKAJADI -->
+    <section class="map-section">
+        <h2>NJR Cell Sukajadi</h2>
+        <a href="https://maps.app.goo.gl/kwNbie566DpopYBGA" target="_blank">
+            <img src="njrsukajadi.png" alt="Lokasi NJR Cell Sukajadi">
         </a>
-        <a href="https://www.tiktok.com/@njrcell" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Ionicons_logo-tiktok.svg/250px-Ionicons_logo-tiktok.svg.png" alt="TikTok NJR Cell">
+        <br>
+        <a href="https://api.whatsapp.com/send/?phone=6285320000303" class="btn" target="_blank">WhatsApp Sukajadi</a>
+    </section>
+
+    <!-- LOKASI CIHERANG -->
+    <section class="map-section">
+        <h2>NJR Cell Ciherang</h2>
+        <a href="https://maps.app.goo.gl/m4d9JoxcXCYds6ep6" target="_blank">
+            <img src="njrciherang.png" alt="Lokasi NJR Cell Ciherang">
         </a>
-    </div>
-    <p>&copy; 2025 NJR Cell - All Rights Reserved</p>
-</footer>
+        <br>
+        <a href="https://api.whatsapp.com/send/?phone=6283120000303" class="btn" target="_blank">WhatsApp Ciherang</a>
+    </section>
+
+    <!-- SOSIAL MEDIA -->
+    <footer>
+        <h3>Ikuti Kami</h3>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/njrcell88" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram NJR Cell">
+            </a>
+            <a href="https://www.tiktok.com/@njrcell" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Ionicons_logo-tiktok.svg/250px-Ionicons_logo-tiktok.svg.png" alt="TikTok NJR Cell">
+            </a>
+        </div>
+        <p>&copy; 2025 NJR Cell - All Rights Reserved</p>
+    </footer>
 
 </body>
 </html>
