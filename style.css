@@ -56,7 +56,23 @@ header h1 {
     margin-bottom: 10px;
 }
 
-/* WHATSAPP BUTTON */
+/* TOMBOL UMUM */
+.btn {
+    display: inline-block;
+    background: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+.btn:hover {
+    background: #e55a00;
+    transform: scale(1.05);
+}
+
+/* WHATSAPP BUTTON FLOAT */
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
