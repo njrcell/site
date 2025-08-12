@@ -23,6 +23,7 @@
         .btn:hover {
             background: #32cc10;
         }
+
         /* Sosmed logo */
         .social-icons img {
             width: 40px;
@@ -33,6 +34,15 @@
         .social-icons img:hover {
             transform: scale(1.1);
         }
+
+        /* Banner tidak terpotong */
+        .banner img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+
         /* Map section */
         .map-section {
             margin: 20px 0;
@@ -41,6 +51,15 @@
             max-width: 100%;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        /* Menu layanan */
+        .menu-layanan {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
         }
     </style>
 </head>
@@ -56,6 +75,14 @@
     <!-- BANNER -->
     <section class="banner">
         <img src="imgbanner.png" alt="Banner Agen Mandiri NJR Cell">
+    </section>
+
+    <!-- MENU LAYANAN -->
+    <section class="menu-layanan">
+        <a href="https://s.id/pulsa-njrcell" class="btn" target="_blank">Pulsa</a>
+        <a href="https://s.id/data-njrcell" class="btn" target="_blank">Data</a>
+        <a href="https://s.id/token-njrcell" class="btn" target="_blank">Token PLN</a>
+        <a href="https://s.id/voucher-njrcell" class="btn" target="_blank">Voucher Game</a>
     </section>
 
     <!-- INFO UTAMA -->
