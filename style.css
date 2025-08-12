@@ -1,103 +1,74 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f9f9f9;
-    color: #333;
-    text-align: center;
+/* Tombol hijau neon */
+.btn {
+    display: inline-block;
+    background: #39ff14;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+.btn:hover {
+    background: #32cc10;
 }
 
-/* HEADER */
-header {
-    background: #ff6600;
-    color: white;
-    padding: 15px;
+/* Sosmed logo */
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    transition: transform 0.2s;
 }
-header .logo {
-    width: 80px;
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Banner tidak terpotong */
+.banner img {
+    max-width: 100%;
     height: auto;
+    display: block;
+    margin: auto;
+}
+
+/* Map section */
+.map-section {
+    margin: 20px 0;
+}
+.map-section img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Menu layanan */
+.menu-layanan {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+/* Header & footer */
+header {
+    text-align: center;
+    padding: 10px;
+}
+header img.logo {
+    max-width: 120px;
 }
 header h1 {
     margin: 5px 0;
 }
-
-/* BANNER */
-.banner img {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-}
-
-/* MENU LAYANAN */
-.services {
-    padding: 20px;
-}
-.services h2 {
-    margin-bottom: 15px;
-}
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 15px;
-}
-.card {
-    background: white;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
-}
-.card:hover {
-    transform: scale(1.05);
-}
-.card i {
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-/* Tombol Hijau Neon */
-.btn {
-    display: block;
-    text-decoration: none;
-    color: white;
-    background: #39ff14; /* Hijau neon */
-    border-radius: 10px;
-    padding: 15px;
-    font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    transition: transform 0.2s, background 0.2s;
-}
-.btn:hover {
-    transform: scale(1.05);
-    background: #32cd10; /* Hijau neon sedikit gelap saat hover */
-}
-
-/* MAP */
-.map {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-}
-
-/* WHATSAPP BUTTON */
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-}
-.whatsapp-float a {
-    background: #25D366;
-    color: white;
-    padding: 15px;
-    border-radius: 50%;
-    font-size: 24px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-/* FOOTER */
-footer {
-    background: #333;
-    color: white;
-    padding: 10px;
+header p {
     font-size: 14px;
+    color: #555;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #f3f3f3;
+    margin-top: 20px;
 }
