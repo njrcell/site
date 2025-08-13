@@ -14,6 +14,7 @@
             text-align: center;
             margin: 0;
             padding: 0;
+            background-color: #fffbea;
         }
 
         /* Semua gambar responsif */
@@ -34,22 +35,27 @@
             width: 100%;
             height: auto;
             display: block;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
 
-        /* Tombol emas */
+        /* Tombol emas dengan animasi */
         .btn {
             display: inline-block;
-            background: gold;
+            background: linear-gradient(45deg, gold, #e6b800);
             color: black;
             padding: 12px 20px;
             text-decoration: none;
             border-radius: 8px;
             font-weight: bold;
             margin: 5px;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.2);
         }
         .btn:hover {
-            background: #e6b800;
+            background: linear-gradient(45deg, #ffd700, #ffcc00);
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255,215,0,0.6);
         }
 
         /* Sosmed logo */
@@ -57,10 +63,11 @@
             width: 40px;
             height: 40px;
             margin: 5px;
-            transition: transform 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
         .social-icons img:hover {
             transform: scale(1.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
         }
 
         /* Map section */
@@ -72,7 +79,7 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
-        /* Menu grid untuk PC & HP */
+        /* Menu grid */
         .menu-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -84,7 +91,7 @@
         footer {
             margin-top: 20px;
             padding: 10px;
-            background: #f1f1f1;
+            background: #fff3cd;
         }
     </style>
 </head>
