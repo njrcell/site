@@ -1,27 +1,61 @@
-body { font-family: Arial, sans-serif; margin:0; background:#fffbea; }
-img { max-width:100%; height:auto; }
-.logo { max-width:150px; margin-top:10px; border-radius:50%; box-shadow:0 4px 10px rgba(0,0,0,0.3); }
-header { background: linear-gradient(135deg, #ffcc00, #ff9900); text-align:center; padding:20px 0; color:white; }
-h1 { margin:10px 0 0; font-size:2em; }
-
-/* Slideshow */
-.slideshow-container {
-    position:relative; 
-    max-width:800px;   /* lebih kecil biar pas di desktop */
-    margin:20px auto; 
-    overflow:hidden; 
-    border-radius:12px; 
-    box-shadow:0 4px 12px rgba(0,0,0,0.25);
+/* ===================
+   GLOBAL
+=================== */
+body { 
+    font-family: Arial, sans-serif; 
+    margin:0; 
+    background:#fffbea; 
 }
-.mySlides { display:none; animation: fade 1.5s; position: relative; }
-.mySlides img { display:block; width:100%; height:auto; border-radius:12px; }
+img { 
+    max-width:100%; 
+    height:auto; 
+}
+.logo { 
+    max-width:150px; 
+    margin-top:10px; 
+    border-radius:50%; 
+    box-shadow:0 4px 10px rgba(0,0,0,0.3); 
+}
+header { 
+    background: linear-gradient(135deg, #ffcc00, #ff9900); 
+    text-align:center; 
+    padding:20px 0; 
+    color:white; 
+}
+h1 { 
+    margin:10px 0 0; 
+    font-size:2em; 
+}
+
+/* ===================
+   SLIDESHOW
+=================== */
+.slideshow-container {
+    position: relative; 
+    max-width: 900px;      /* batasi lebar desktop */
+    margin: 20px auto; 
+    overflow: hidden; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.mySlides { 
+    display: none; 
+    animation: fade 1.5s; 
+    position: relative; 
+}
+.mySlides img { 
+    display: block; 
+    width: 100%; 
+    height: auto; 
+    border-radius: 10px; 
+}
 .mySlides::after {
     content:"";
     position:absolute; top:0; left:0;
     width:100%; height:100%;
     background:rgba(0,0,0,0.12);
     pointer-events:none;
-    border-radius:12px;
+    border-radius:10px;
 }
 @keyframes fade { from {opacity:.3} to {opacity:1} }
 
@@ -42,36 +76,80 @@ h1 { margin:10px 0 0; font-size:2em; }
 }
 .active, .dot:hover { background-color:#717171; }
 
-/* Tombol menu */
+/* ===================
+   TOMBOL MENU
+=================== */
 .btn {
-    display:inline-block; 
+    display:flex;
+    justify-content:center;
+    align-items:center;
     background:linear-gradient(45deg, gold, #e6b800);
-    color:black; padding:12px 18px;
-    text-decoration:none; border-radius:8px;
-    font-weight:bold; text-align:center; 
+    color:black;
+    padding:12px 15px;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    text-align:center;
     transition:all 0.3s ease;
     box-shadow:0 3px 6px rgba(0,0,0,0.2);
-    max-width:220px;
-    margin:8px auto;
+    height:50px;       /* tinggi seragam */
+    width:100%;        /* lebar penuh kolom */
 }
-.btn:hover { background:linear-gradient(45deg, #ffd700, #ffcc00); transform:scale(1.05); }
+.btn:hover {
+    background:linear-gradient(45deg, #ffd700, #ffcc00);
+    transform:scale(1.05);
+}
 
-/* Menu grid */
+/* ===================
+   MENU GRID
+=================== */
 .menu-grid {
-    display:grid; grid-template-columns:repeat(3, 1fr);
-    gap:12px; max-width:720px; margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:12px;
+    max-width:720px;
+    margin:auto;
 }
 
-/* Map section */
-.map-section { margin:20px 0; text-align:center; }
-.map-section img { border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.2); max-width:500px; }
+/* ===================
+   MAP SECTION
+=================== */
+.map-section { 
+    margin:20px 0; 
+    text-align:center; 
+}
+.map-section img { 
+    border-radius:10px; 
+    box-shadow:0 2px 5px rgba(0,0,0,0.2); 
+    max-width:500px; 
+}
 
-/* Sosial media */
-.social-icons img { width:40px; height:40px; margin:5px; transition:transform 0.2s; }
-.social-icons img:hover { transform:scale(1.1); }
-footer { text-align:center; padding:10px; background:#fff3cd; margin-top:20px; }
+/* ===================
+   SOSIAL MEDIA
+=================== */
+.social-icons img { 
+    width:40px; 
+    height:40px; 
+    margin:5px; 
+    transition:transform 0.2s; 
+}
+.social-icons img:hover { 
+    transform:scale(1.1); 
+}
 
-/* Responsif */
+/* ===================
+   FOOTER
+=================== */
+footer { 
+    text-align:center; 
+    padding:10px; 
+    background:#fff3cd; 
+    margin-top:20px; 
+}
+
+/* ===================
+   RESPONSIVE
+=================== */
 @media(max-width:768px){
     .slideshow-container { max-width:100%; }
     .menu-grid { grid-template-columns:repeat(2,1fr); }
