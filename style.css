@@ -159,3 +159,30 @@ footer {
 @media(max-width:480px){
     .menu-grid { grid-template-columns:1fr; }
 }
+/* Tambahan styling tombol WA */
+.btn-wa {
+    display: block;
+    background: linear-gradient(45deg, #25d366, #128c7e); /* hijau ala WA */
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    max-width: 250px;
+    margin: 10px auto 20px;
+}
+.btn-wa:hover {
+    background: linear-gradient(45deg, #1ebe5d, #0e7a6a);
+    transform: scale(1.05);
+}
+
+/* Tambahan biar alamat rapih */
+.map-section .alamat {
+    font-size: 15px;
+    margin: 10px auto;
+    max-width: 600px;
+    line-height: 1.5;
+}
