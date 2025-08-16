@@ -6,6 +6,15 @@
 <meta name="description" content="NJR Cell - Transaksi Online 24 Jam, Pulsa, Paket Data, PLN, Token, TopUp Game, Transfer & Tarik Tunai Bank/E-Wallet Tarif Murah!">
 <title>NJR Cell | Transaksi Online 24 Jam</title>
 <link rel="stylesheet" href="style.css">
+<style>
+/* Tambahan khusus untuk tombol WhatsApp di map-section */
+.map-section .btn {
+    display: block;
+    margin: 10px auto 20px;
+    max-width: 250px;
+    text-align: center;
+}
+</style>
 </head>
 <body>
 
@@ -75,26 +84,26 @@
 <!-- LOKASI -->
 <section class="map-section">
     <h2>NJR Cell Sukajadi</h2>
-    <p class="alamat">
-        Jln. Sukajadi Rt 006 Rw 002, Desa Sukajadi, Kec. Pamarican, Kab. Ciamis
-        <br>(Samping Sekolah MAN 4 Ciamis)
-    </p>
-    <a href="https://api.whatsapp.com/send/?phone=6285320000303" class="btn" target="_blank">WhatsApp Sukajadi</a>
     <a href="https://maps.app.goo.gl/kwNbie566DpopYBGA" target="_blank">
         <img src="img/njrsukajadi.png" alt="Lokasi Sukajadi">
     </a>
+    <p class="alamat">Jln.Sukajadi Rt 006 Rw 002 Desa Sukajadi kec.Pamarican Kab.Ciamis (Samping Sekolah MAN 4 Ciamis)</p>
+    <a href="https://api.whatsapp.com/send/?phone=6285320000303" class="btn" target="_blank">WhatsApp Sukajadi</a>
 </section>
 
 <section class="map-section">
     <h2>NJR Cell Ciherang</h2>
-    <p class="alamat">
-        Jln. Pangandaran No 84, Desa Ciherang Rt 005 Rw 001, Kec. Banjarsari, Kab. Ciamis
-        <br>(Samping Sekolah MAN 4 Ciamis)
-    </p>
-    <a href="https://api.whatsapp.com/send/?phone=6283120000303" class="btn" target="_blank">WhatsApp Ciherang</a>
     <a href="https://maps.app.goo.gl/m4d9JoxcXCYds6ep6" target="_blank">
         <img src="img/njrciherang.png" alt="Lokasi Ciherang">
     </a>
+    <p class="alamat">Jln.Pangandaran No 84 desa Ciherang Rt 005 Rw 001 Desa Ciherang kec.Banjarsari Kab.Ciamis (Samping Sekolah MAN 4 Ciamis)</p>
+    <a href="https://api.whatsapp.com/send/?phone=6283120000303" class="btn" target="_blank">WhatsApp Ciherang</a>
+</section>
+
+<!-- PRODUK -->
+<section class="services" style="text-align:center;">
+    <h2>Produk Pelindung Handphone</h2>
+    <a href="https://njrcellciherang.my.canva.site/hydrogel" class="btn" target="_blank">Lihat Produk</a>
 </section>
 
 <!-- FOOTER -->
@@ -126,12 +135,8 @@ function showSlides(n){
     let dots=document.getElementsByClassName("dot");
     if(n>slides.length){ slideIndex=1 }
     if(n<1){ slideIndex=slides.length }
-    for(i=0;i<slides.length;i++){ 
-        slides[i].style.display="none"; 
-    }
-    for(i=0;i<dots.length;i++){ 
-        dots[i].className=dots[i].className.replace(" active",""); 
-    }
+    for(i=0;i<slides.length;i++){ slides[i].style.display="none"; }
+    for(i=0;i<dots.length;i++){ dots[i].className=dots[i].className.replace(" active",""); }
     slides[slideIndex-1].style.display="block";
     dots[slideIndex-1].className += " active";
 }
@@ -139,20 +144,17 @@ setInterval(()=>{ plusSlides(1); }, 6000);
 </script>
 
 <script>
-// Countdown Tahun Baru 2026
+// Countdown
 var countDownDate = new Date("Jan 1, 2026 00:00:00").getTime();
 var x = setInterval(function() {
     var now = new Date().getTime();
     var distance = countDownDate - now;
-
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
     document.getElementById("countdown").innerHTML =
         days + " Days : " + hours + " Hours : " + minutes + " Minutes : " + seconds + " Seconds";
-
     if (distance < 0) {
         clearInterval(x);
         document.getElementById("countdown").innerHTML = "Happy New Year 2026!";
