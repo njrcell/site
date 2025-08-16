@@ -104,13 +104,13 @@
     </div>
     <p>&copy; 2025 NJR Cell - All Rights Reserved</p>
 
-    <!-- COUNTDOWN -->
-    <section style="text-align:center; padding:20px; background:#f8f8f8; border-radius:10px; margin-top:20px;">
-        <h2>Waktu Menuju Tahun Baru 2026 !!!</h2>
-        <div id="countdown" style="font-size: 28px; font-weight: bold; margin-top: 10px;">
-            000 Days : 00 Hours : 00 Minutes : 00 Seconds
-        </div>
-    </section>
+<!-- COUNTDOWN -->
+<section style="text-align:center; padding:20px; background:#f8f8f8; border-radius:10px; margin-top:20px;">
+    <h2>Waktu Menuju Tahun Baru 2026 !!!</h2>
+    <div id="countdown" style="font-size: 28px; font-weight: bold; margin-top: 10px;">
+        000 Days : 00 Hours : 00 Minutes : 00 Seconds
+    </div>
+</section>
 </footer>
 
 <script>
@@ -124,8 +124,12 @@ function showSlides(n){
     let dots=document.getElementsByClassName("dot");
     if(n>slides.length){ slideIndex=1 }
     if(n<1){ slideIndex=slides.length }
-    for(i=0;i<slides.length;i++){ slides[i].style.display="none"; }
-    for(i=0;i<dots.length;i++){ dots[i].className=dots[i].className.replace(" active",""); }
+    for(i=0;i<slides.length;i++){ 
+        slides[i].style.display="none"; 
+    }
+    for(i=0;i<dots.length;i++){ 
+        dots[i].className=dots[i].className.replace(" active",""); 
+    }
     slides[slideIndex-1].style.display="block";
     dots[slideIndex-1].className += " active";
 }
@@ -133,16 +137,20 @@ setInterval(()=>{ plusSlides(1); }, 6000);
 </script>
 
 <script>
+// Countdown Tahun Baru 2026
 var countDownDate = new Date("Jan 1, 2026 00:00:00").getTime();
 var x = setInterval(function() {
     var now = new Date().getTime();
     var distance = countDownDate - now;
+
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
     document.getElementById("countdown").innerHTML =
         days + " Days : " + hours + " Hours : " + minutes + " Minutes : " + seconds + " Seconds";
+
     if (distance < 0) {
         clearInterval(x);
         document.getElementById("countdown").innerHTML = "Happy New Year 2026!";
