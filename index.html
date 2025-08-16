@@ -7,12 +7,18 @@
 <title>NJR Cell | Transaksi Online 24 Jam</title>
 <link rel="stylesheet" href="style.css">
 <style>
-/* Tambahan khusus untuk tombol WhatsApp di map-section */
+/* Tambahan khusus tombol WhatsApp map-section */
 .map-section .btn {
     display: block;
     margin: 10px auto 20px;
     max-width: 250px;
     text-align: center;
+}
+/* Styling alamat */
+.map-section .alamat {
+    font-size: 14px;
+    margin: 5px 0 15px;
+    color: #333;
 }
 </style>
 </head>
@@ -84,19 +90,19 @@
 <!-- LOKASI -->
 <section class="map-section">
     <h2>NJR Cell Sukajadi</h2>
+    <p class="alamat">Jln.Sukajadi Rt 006 Rw 002 Desa Sukajadi kec.Pamarican Kab.Ciamis (Samping Sekolah MAN 4 Ciamis)</p>
     <a href="https://maps.app.goo.gl/kwNbie566DpopYBGA" target="_blank">
         <img src="img/njrsukajadi.png" alt="Lokasi Sukajadi">
     </a>
-    <p class="alamat">Jln.Sukajadi Rt 006 Rw 002 Desa Sukajadi kec.Pamarican Kab.Ciamis (Samping Sekolah MAN 4 Ciamis)</p>
     <a href="https://api.whatsapp.com/send/?phone=6285320000303" class="btn" target="_blank">WhatsApp Sukajadi</a>
 </section>
 
 <section class="map-section">
     <h2>NJR Cell Ciherang</h2>
+    <p class="alamat">Jln.Pangandaran No 84 Desa Ciherang Rt 005 Rw 001 kec.Banjarsari Kab.Ciamis (Samping Sekolah MAN 4 Ciamis)</p>
     <a href="https://maps.app.goo.gl/m4d9JoxcXCYds6ep6" target="_blank">
         <img src="img/njrciherang.png" alt="Lokasi Ciherang">
     </a>
-    <p class="alamat">Jln.Pangandaran No 84 desa Ciherang Rt 005 Rw 001 Desa Ciherang kec.Banjarsari Kab.Ciamis (Samping Sekolah MAN 4 Ciamis)</p>
     <a href="https://api.whatsapp.com/send/?phone=6283120000303" class="btn" target="_blank">WhatsApp Ciherang</a>
 </section>
 
@@ -114,14 +120,6 @@
         <a href="https://www.tiktok.com/@njrcell" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Ionicons_logo-tiktok.svg"></a>
     </div>
     <p>&copy; 2025 NJR Cell - All Rights Reserved</p>
-
-<!-- COUNTDOWN -->
-<section style="text-align:center; padding:20px; background:#f8f8f8; border-radius:10px; margin-top:20px;">
-    <h2>Waktu Menuju Tahun Baru 2026 !!!</h2>
-    <div id="countdown" style="font-size: 28px; font-weight: bold; margin-top: 10px;">
-        000 Days : 00 Hours : 00 Minutes : 00 Seconds
-    </div>
-</section>
 </footer>
 
 <script>
@@ -141,25 +139,6 @@ function showSlides(n){
     dots[slideIndex-1].className += " active";
 }
 setInterval(()=>{ plusSlides(1); }, 6000);
-</script>
-
-<script>
-// Countdown
-var countDownDate = new Date("Jan 1, 2026 00:00:00").getTime();
-var x = setInterval(function() {
-    var now = new Date().getTime();
-    var distance = countDownDate - now;
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    document.getElementById("countdown").innerHTML =
-        days + " Days : " + hours + " Hours : " + minutes + " Minutes : " + seconds + " Seconds";
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("countdown").innerHTML = "Happy New Year 2026!";
-    }
-}, 1000);
 </script>
 
 </body>
