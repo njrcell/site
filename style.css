@@ -41,3 +41,34 @@ footer { text-align:center; padding:10px; background:#fff3cd; margin-top:20px; }
 /* Responsive */
 @media(max-width:768px){ .slideshow-container { max-width:100%; } .menu-grid { grid-template-columns:repeat(2,1fr); } }
 @media(max-width:480px){ .menu-grid { grid-template-columns:1fr; } }
+
+
+/* --- Perbaikan Tombol & Layout --- */
+.btn {
+  display: inline-block;
+  background: linear-gradient(45deg, gold, #e6b800);
+  color: black;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+  max-width: 200px;   /* batas biar tidak kepanjangan */
+  width: 100%;        /* isi kolom grid */
+}
+
+.slideshow-container {
+  max-width: 900px;   /* supaya di desktop tidak melebar penuh */
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.map-section img {
+  max-width: 600px;   /* peta tidak terlalu besar di PC */
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
