@@ -81,28 +81,3 @@
         .menu-grid { grid-template-columns:1fr; }
     }
 </style>
-
-/* Tombol WhatsApp khusus lokasi */
-.btn-wa {
-    display: inline-block;
-    background: linear-gradient(45deg, #25d366, #128c7e);
-    color: white;
-    padding: 12px 20px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
-    margin: 10px auto;
-}
-.btn-wa:hover {
-    background: linear-gradient(45deg, #20bd5a, #0d7a66);
-    transform: scale(1.05);
-}
-.alamat {
-    font-size: 15px;
-    margin: 10px 0;
-    font-style: italic;
-    color: #444;
-}
