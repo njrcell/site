@@ -5,111 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="NJR Cell - Transaksi Online 24 Jam, Pulsa, Paket Data, PLN, Token, TopUp Game, Transfer & Tarik Tunai Bank/E-Wallet Tarif Murah!">
 <title>NJR Cell | Transaksi Online 24 Jam</title>
-<style>
-    body { font-family: Arial, sans-serif; margin:0; background:#fffbea; }
-    img { max-width:100%; height:auto; }
-    .logo { max-width:150px; margin-top:10px; border-radius:50%; box-shadow:0 4px 10px rgba(0,0,0,0.3); }
-    header { background: linear-gradient(135deg, #ffcc00, #ff9900); text-align:center; padding:20px 0; color:white; }
-    h1 { margin:10px 0 0; font-size:2em; }
-
-    /* Slideshow */
-    .slideshow-container {
-        position:relative; 
-        max-width:800px;   /* diperkecil agar tidak terlalu besar di desktop */
-        margin:20px auto; 
-        overflow:hidden; 
-        border-radius:12px; 
-        box-shadow:0 4px 12px rgba(0,0,0,0.25);
-    }
-    .mySlides { display:none; animation: fade 1.5s; position: relative; }
-    .mySlides img { display:block; width:100%; height:auto; border-radius:12px; }
-    .mySlides::after {
-        content:"";
-        position:absolute; top:0; left:0;
-        width:100%; height:100%;
-        background:rgba(0,0,0,0.12);
-        pointer-events:none;
-        border-radius:12px;
-    }
-    @keyframes fade { from {opacity:.3} to {opacity:1} }
-
-    .prev, .next {
-        cursor:pointer; position:absolute; top:50%; transform:translateY(-50%);
-        padding:14px; color:white; font-weight:bold; font-size:18px;
-        border-radius:50%; user-select:none; background:rgba(0,0,0,0.5);
-    }
-    .next { right:10px; }
-    .prev { left:10px; }
-    .prev:hover, .next:hover { background:rgba(0,0,0,0.8); }
-
-    .dot-container { text-align:center; padding:10px 0; }
-    .dot {
-        cursor:pointer; height:12px; width:12px; margin:0 4px;
-        background-color:#bbb; border-radius:50%; display:inline-block;
-        transition: background-color 0.6s ease;
-    }
-    .active, .dot:hover { background-color:#717171; }
-
-    /* Tombol menu */
-    .btn {
-        display:inline-block; 
-        background:linear-gradient(45deg, gold, #e6b800);
-        color:black; padding:12px 18px;   /* lebih ramping */
-        text-decoration:none; border-radius:8px;
-        font-weight:bold; text-align:center; 
-        transition:all 0.3s ease;
-        box-shadow:0 3px 6px rgba(0,0,0,0.2);
-        max-width:220px;   /* batasi panjang tombol */
-        margin:8px auto;   /* auto center */
-    }
-    .btn:hover { background:linear-gradient(45deg, #ffd700, #ffcc00); transform:scale(1.05); }
-
-    /* Menu grid */
-    .menu-grid {
-        display:grid; grid-template-columns:repeat(3, 1fr);
-        gap:12px; max-width:720px; margin:auto;
-    }
-
-    /* Map section */
-    .map-section { margin:20px 0; text-align:center; }
-    .map-section img { border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.2); max-width:500px; }
-
-    /* Sosial media */
-    .social-icons img { width:40px; height:40px; margin:5px; transition:transform 0.2s; }
-    .social-icons img:hover { transform:scale(1.1); }
-    footer { text-align:center; padding:10px; background:#fff3cd; margin-top:20px; }
-
-    /* Responsif */
-    @media(max-width:768px){
-        .slideshow-container { max-width:100%; }
-        .menu-grid { grid-template-columns:repeat(2,1fr); }
-    }
-    @media(max-width:480px){
-        .menu-grid { grid-template-columns:1fr; }
-    }
-</style>
-
-<script>
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 4000); // ganti slide tiap 4 detik
-}
-</script>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -208,14 +104,13 @@ function showSlides() {
     </div>
     <p>&copy; 2025 NJR Cell - All Rights Reserved</p>
 
-<!-- COUNTDOWN -->
-<section style="text-align:center; padding:20px; background:#f8f8f8; border-radius:10px; margin-top:20px;">
-    <h2>Waktu Menuju Tahun Baru 2026 !!!</h2>
-    <div id="countdown" style="font-size: 28px; font-weight: bold; margin-top: 10px;">
-        000 Days : 00 Hours : 00 Minutes : 00 Seconds
-    </div>
-</section>
-
+    <!-- COUNTDOWN -->
+    <section style="text-align:center; padding:20px; background:#f8f8f8; border-radius:10px; margin-top:20px;">
+        <h2>Waktu Menuju Tahun Baru 2026 !!!</h2>
+        <div id="countdown" style="font-size: 28px; font-weight: bold; margin-top: 10px;">
+            000 Days : 00 Hours : 00 Minutes : 00 Seconds
+        </div>
+    </section>
 </footer>
 
 <script>
@@ -229,69 +124,25 @@ function showSlides(n){
     let dots=document.getElementsByClassName("dot");
     if(n>slides.length){ slideIndex=1 }
     if(n<1){ slideIndex=slides.length }
-    for(i=0;i<slides.length;i++){ 
-        slides[i].style.display="none"; 
-        // Reset filter
-        let img = slides[i].querySelector("img");
-        if(img){
-            img.style.filter = "brightness(95%)";
-            slides[i].style.setProperty("--overlay-alpha", 0.12);
-        }
-    }
+    for(i=0;i<slides.length;i++){ slides[i].style.display="none"; }
     for(i=0;i<dots.length;i++){ dots[i].className=dots[i].className.replace(" active",""); }
     slides[slideIndex-1].style.display="block";
     dots[slideIndex-1].className += " active";
-
-    // Auto adjust brightness berdasarkan warna rata-rata
-    let img = slides[slideIndex-1].querySelector("img");
-    if(img){
-        let tempImg = new Image();
-        tempImg.crossOrigin = "Anonymous";
-        tempImg.src = img.src;
-        tempImg.onload = function(){
-            let canvas = document.createElement("canvas");
-            canvas.width = this.width;
-            canvas.height = this.height;
-            let ctx = canvas.getContext("2d");
-            ctx.drawImage(this,0,0);
-            let data = ctx.getImageData(0,0,canvas.width,canvas.height).data;
-            let r=0,g=0,b=0,count=data.length/4;
-            for(let j=0;j<data.length;j+=4){
-                r += data[j];
-                g += data[j+1];
-                b += data[j+2];
-            }
-            let avgBrightness = (r/count + g/count + b/count) / 3;
-            if(avgBrightness > 180){ // gambar terang
-                img.style.filter = "brightness(100%)";
-                slides[slideIndex-1].style.setProperty("--overlay-alpha", 0.05);
-            } else if(avgBrightness < 80){ // gambar gelap
-                img.style.filter = "brightness(110%)";
-                slides[slideIndex-1].style.setProperty("--overlay-alpha", 0.18);
-            }
-        }
-    }
 }
 setInterval(()=>{ plusSlides(1); }, 6000);
 </script>
 
-
 <script>
-// Tentukan tanggal target
 var countDownDate = new Date("Jan 1, 2026 00:00:00").getTime();
-
 var x = setInterval(function() {
     var now = new Date().getTime();
     var distance = countDownDate - now;
-
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
     document.getElementById("countdown").innerHTML =
         days + " Days : " + hours + " Hours : " + minutes + " Minutes : " + seconds + " Seconds";
-
     if (distance < 0) {
         clearInterval(x);
         document.getElementById("countdown").innerHTML = "Happy New Year 2026!";
