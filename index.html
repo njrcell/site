@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NJR Cell - Transaksi Online 24 Jam, Pulsa, Paket Data, PLN, Token, TopUp Game, Transfer & Tarik Tunai Bank/E-Wallet Tarif Murah!">
+<title>NJR Cell | Transaksi Online 24 Jam</title>
 <style>
     body { font-family: Arial, sans-serif; margin:0; background:#fffbea; }
     img { max-width:100%; height:auto; }
@@ -8,28 +15,27 @@
     /* Slideshow */
     .slideshow-container {
         position:relative; 
-        max-width:900px;  /* Batas lebar desktop */
+        max-width:800px;   /* diperkecil agar tidak terlalu besar di desktop */
         margin:20px auto; 
         overflow:hidden; 
-        border-radius:10px; 
-        box-shadow:0 4px 10px rgba(0,0,0,0.2);
+        border-radius:12px; 
+        box-shadow:0 4px 12px rgba(0,0,0,0.25);
     }
     .mySlides { display:none; animation: fade 1.5s; position: relative; }
-    .mySlides img { display:block; width:100%; height:auto; border-radius:10px; }
+    .mySlides img { display:block; width:100%; height:auto; border-radius:12px; }
     .mySlides::after {
         content:"";
         position:absolute; top:0; left:0;
         width:100%; height:100%;
         background:rgba(0,0,0,0.12);
         pointer-events:none;
-        transition: background 0.3s ease;
-        border-radius:10px;
+        border-radius:12px;
     }
     @keyframes fade { from {opacity:.3} to {opacity:1} }
 
     .prev, .next {
         cursor:pointer; position:absolute; top:50%; transform:translateY(-50%);
-        padding:16px; color:white; font-weight:bold; font-size:18px;
+        padding:14px; color:white; font-weight:bold; font-size:18px;
         border-radius:50%; user-select:none; background:rgba(0,0,0,0.5);
     }
     .next { right:10px; }
@@ -48,20 +54,20 @@
     .btn {
         display:inline-block; 
         background:linear-gradient(45deg, gold, #e6b800);
-        color:black; padding:12px 20px; 
+        color:black; padding:12px 18px;   /* lebih ramping */
         text-decoration:none; border-radius:8px;
         font-weight:bold; text-align:center; 
         transition:all 0.3s ease;
-        box-shadow:0 3px 5px rgba(0,0,0,0.2);
-        max-width:250px;   /* Biar tidak kepanjangan */
-        margin:5px auto;   /* Auto center */
+        box-shadow:0 3px 6px rgba(0,0,0,0.2);
+        max-width:220px;   /* batasi panjang tombol */
+        margin:8px auto;   /* auto center */
     }
     .btn:hover { background:linear-gradient(45deg, #ffd700, #ffcc00); transform:scale(1.05); }
 
-    /* Menu grid dibagi 3 */
+    /* Menu grid */
     .menu-grid {
         display:grid; grid-template-columns:repeat(3, 1fr);
-        gap:10px; max-width:800px; margin:auto;
+        gap:12px; max-width:720px; margin:auto;
     }
 
     /* Map section */
@@ -82,3 +88,216 @@
         .menu-grid { grid-template-columns:1fr; }
     }
 </style>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 4000); // ganti slide tiap 4 detik
+}
+</script>
+</head>
+<body>
+
+<header>
+    <img src="img/njrcell.png" alt="Logo NJR Cell" class="logo">
+    <h1>NJR Cell</h1>
+    <p>💡 Solusi Cepat & Aman! Pulsa, Paket Data, Token PLN, TopUp Game, Hingga Transfer & Tarik Tunai 24 Jam</p>
+</header>
+
+<!-- Slideshow -->
+<div class="slideshow-container">
+    <a href="https://www.instagram.com/njrcell88" target="_blank" class="mySlides"><img src="img/1.png"></a>
+    <a href="https://www.tiktok.com/@njrcell" target="_blank" class="mySlides"><img src="img/3.png"></a>
+    <a href="https://www.instagram.com/njrcell88" target="_blank" class="mySlides"><img src="img/4.png"></a>
+    <a href="https://www.tiktok.com/@njrcell" target="_blank" class="mySlides"><img src="img/5.png"></a>
+    <a href="https://www.instagram.com/njrcell88" target="_blank" class="mySlides"><img src="img/6.png"></a>
+    <a href="https://www.tiktok.com/@njrcell" target="_blank" class="mySlides"><img src="img/7.png"></a>
+    <a href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MTA3MDQ1NDc2NTU3ODgw?story_media_id=3693231078690847949_56923304344&igsh=Z2VieGY4c2hoYWU4" target="_blank" class="mySlides"><img src="img/8.png"></a>
+    <a href="https://www.tiktok.com/@njrcell" target="_blank" class="mySlides"><img src="img/9.png"></a>
+    <a href="https://www.instagram.com/njrcell88" target="_blank" class="mySlides"><img src="img/10.png"></a>
+    <a href="https://www.instagram.com/njrcell88" target="_blank" class="mySlides"><img src="img/imgbanner.png"></a>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+<div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+    <span class="dot" onclick="currentSlide(9)"></span>
+</div>
+
+<!-- MENU ONLINE -->
+<section class="services">
+    <h2 style="text-align:center;">Transaksi Online 24 JAM</h2>
+    <div class="menu-grid">
+        <a href="https://buylink.id/njrcell" target="_blank" class="btn">Pulsa</a>
+        <a href="https://buylink.id/njrcell" target="_blank" class="btn">Paket Data</a>
+        <a href="https://buylink.id/njrcell" target="_blank" class="btn">Paket Telpon</a>
+        <a href="https://buylink.id/njrcell" target="_blank" class="btn">Token Listrik</a>
+        <a href="https://buylink.id/njrcell" target="_blank" class="btn">Voucher Game</a>
+        <a href="https://buylink.id/njrcell" target="_blank" class="btn">E-Wallet</a>
+        <a href="https://buylink.id/njrcell" target="_blank" class="btn">TV & Internet</a>
+        <a href="https://buylink.id/njrcell" target="_blank" class="btn">Bayar Tagihan</a>
+        <a href="https://buylink.id/njrcell" target="_blank" class="btn">Voucher Belanja</a>
+    </div>
+</section>
+
+<!-- MENU OFFLINE -->
+<section style="background-color:#fff7e6; padding:20px 0;">
+    <h2 style="text-align:center;">Layanan Offline (Datang ke Toko)</h2>
+    <div class="menu-grid">
+        <a href="https://api.whatsapp.com/send?phone=6282120000303&text=pesan pelindung layar hydrogel" target="_blank" class="btn">Pelindung Layar</a>
+        <a href="https://api.whatsapp.com/send?phone=6282120000303&text=pesan garskin" target="_blank" class="btn">Garskin</a>
+        <a href="https://api.whatsapp.com/send?phone=6282120000303&text=transfer ke bank" target="_blank" class="btn">Transfer</a>
+        <a href="https://api.whatsapp.com/send?phone=6282120000303&text=pesan kartu perdana" target="_blank" class="btn">Kartu Perdana</a>
+        <a href="https://api.whatsapp.com/send?phone=6282120000303&text=pesan voucher fisik internet" target="_blank" class="btn">Voucher Fisik Internet</a>
+        <a href="https://api.whatsapp.com/send?phone=6282120000303&text=tarik tunai bank" target="_blank" class="btn">Tarik Tunai</a>
+    </div>
+</section>
+
+<!-- LOKASI -->
+<section class="map-section">
+    <h2>NJR Cell Sukajadi</h2>
+    <a href="https://maps.app.goo.gl/kwNbie566DpopYBGA" target="_blank">
+        <img src="img/njrsukajadi.png" alt="Lokasi Sukajadi">
+    </a><br>
+    <a href="https://api.whatsapp.com/send/?phone=6285320000303" class="btn" target="_blank">WhatsApp Sukajadi</a>
+</section>
+
+<section class="map-section">
+    <h2>NJR Cell Ciherang</h2>
+    <a href="https://maps.app.goo.gl/m4d9JoxcXCYds6ep6" target="_blank">
+        <img src="img/njrciherang.png" alt="Lokasi Ciherang">
+    </a><br>
+    <a href="https://api.whatsapp.com/send/?phone=6283120000303" class="btn" target="_blank">WhatsApp Ciherang</a>
+</section>
+
+<!-- PRODUK -->
+<section class="services" style="text-align:center;">
+    <h2>Produk Pelindung Handphone</h2>
+    <a href="https://njrcellciherang.my.canva.site/hydrogel" class="btn" target="_blank">Lihat Produk</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <h3>Ikuti Kami</h3>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/njrcell88" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"></a>
+        <a href="https://www.tiktok.com/@njrcell" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Ionicons_logo-tiktok.svg"></a>
+    </div>
+    <p>&copy; 2025 NJR Cell - All Rights Reserved</p>
+
+<!-- COUNTDOWN -->
+<section style="text-align:center; padding:20px; background:#f8f8f8; border-radius:10px; margin-top:20px;">
+    <h2>Waktu Menuju Tahun Baru 2026 !!!</h2>
+    <div id="countdown" style="font-size: 28px; font-weight: bold; margin-top: 10px;">
+        000 Days : 00 Hours : 00 Minutes : 00 Seconds
+    </div>
+</section>
+
+</footer>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n){ showSlides(slideIndex += n); }
+function currentSlide(n){ showSlides(slideIndex = n); }
+function showSlides(n){
+    let i;
+    let slides=document.getElementsByClassName("mySlides");
+    let dots=document.getElementsByClassName("dot");
+    if(n>slides.length){ slideIndex=1 }
+    if(n<1){ slideIndex=slides.length }
+    for(i=0;i<slides.length;i++){ 
+        slides[i].style.display="none"; 
+        // Reset filter
+        let img = slides[i].querySelector("img");
+        if(img){
+            img.style.filter = "brightness(95%)";
+            slides[i].style.setProperty("--overlay-alpha", 0.12);
+        }
+    }
+    for(i=0;i<dots.length;i++){ dots[i].className=dots[i].className.replace(" active",""); }
+    slides[slideIndex-1].style.display="block";
+    dots[slideIndex-1].className += " active";
+
+    // Auto adjust brightness berdasarkan warna rata-rata
+    let img = slides[slideIndex-1].querySelector("img");
+    if(img){
+        let tempImg = new Image();
+        tempImg.crossOrigin = "Anonymous";
+        tempImg.src = img.src;
+        tempImg.onload = function(){
+            let canvas = document.createElement("canvas");
+            canvas.width = this.width;
+            canvas.height = this.height;
+            let ctx = canvas.getContext("2d");
+            ctx.drawImage(this,0,0);
+            let data = ctx.getImageData(0,0,canvas.width,canvas.height).data;
+            let r=0,g=0,b=0,count=data.length/4;
+            for(let j=0;j<data.length;j+=4){
+                r += data[j];
+                g += data[j+1];
+                b += data[j+2];
+            }
+            let avgBrightness = (r/count + g/count + b/count) / 3;
+            if(avgBrightness > 180){ // gambar terang
+                img.style.filter = "brightness(100%)";
+                slides[slideIndex-1].style.setProperty("--overlay-alpha", 0.05);
+            } else if(avgBrightness < 80){ // gambar gelap
+                img.style.filter = "brightness(110%)";
+                slides[slideIndex-1].style.setProperty("--overlay-alpha", 0.18);
+            }
+        }
+    }
+}
+setInterval(()=>{ plusSlides(1); }, 6000);
+</script>
+
+
+<script>
+// Tentukan tanggal target
+var countDownDate = new Date("Jan 1, 2026 00:00:00").getTime();
+
+var x = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML =
+        days + " Days : " + hours + " Hours : " + minutes + " Minutes : " + seconds + " Seconds";
+
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "Happy New Year 2026!";
+    }
+}, 1000);
+</script>
+
+</body>
+</html>
