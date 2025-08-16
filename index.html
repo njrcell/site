@@ -1,134 +1,84 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NJR Cell</title>
-  <style>
-    body { margin:0; font-family:Arial, sans-serif; background:#f8f9fa; color:#333; }
+<style>
+    body { font-family: Arial, sans-serif; margin:0; background:#fffbea; }
+    img { max-width:100%; height:auto; }
+    .logo { max-width:150px; margin-top:10px; border-radius:50%; box-shadow:0 4px 10px rgba(0,0,0,0.3); }
+    header { background: linear-gradient(135deg, #ffcc00, #ff9900); text-align:center; padding:20px 0; color:white; }
+    h1 { margin:10px 0 0; font-size:2em; }
 
     /* Slideshow */
-    .slideshow-container { position:relative; max-width:100%; margin:auto; overflow:hidden; border-radius:12px; }
+    .slideshow-container {
+        position:relative; 
+        max-width:900px;  /* Batas lebar desktop */
+        margin:20px auto; 
+        overflow:hidden; 
+        border-radius:10px; 
+        box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    }
     .mySlides { display:none; animation: fade 1.5s; position: relative; }
-    .mySlides img {
-      display:block;
-      width:100%;
-      height:50vh;       /* setengah tinggi layar */
-      max-height:500px;  /* maksimal 500px */
-      object-fit:cover;
-      filter:brightness(80%);
-    }
+    .mySlides img { display:block; width:100%; height:auto; border-radius:10px; }
     .mySlides::after {
-      content:"";
-      position:absolute; top:0; left:0;
-      width:100%; height:100%;
-      background:rgba(0,0,0,0.25);
+        content:"";
+        position:absolute; top:0; left:0;
+        width:100%; height:100%;
+        background:rgba(0,0,0,0.12);
+        pointer-events:none;
+        transition: background 0.3s ease;
+        border-radius:10px;
     }
-    .prev, .next {
-      cursor:pointer; position:absolute; top:50%; transform:translateY(-50%);
-      padding:12px; color:white; font-weight:bold; font-size:20px; border-radius:50%;
-      background:rgba(0,0,0,0.4); user-select:none; transition:0.3s;
-    }
-    .prev:hover, .next:hover { background:rgba(0,0,0,0.7); }
-    .prev { left:10px; }
-    .next { right:10px; }
-    .dot-container { text-align:center; margin:12px 0; }
-    .dot {
-      cursor:pointer; height:12px; width:12px; margin:0 4px;
-      background-color:#bbb; border-radius:50%; display:inline-block; transition:background 0.6s;
-    }
-    .active, .dot:hover { background:#333; }
     @keyframes fade { from {opacity:.3} to {opacity:1} }
 
-    /* Tombol */
-    .btn-container { text-align:center; margin:15px 0; }
-    .btn-wa, .btn-lokasi, .btn-produk {
-      display:inline-block;
-      padding:12px 20px;
-      border-radius:8px;
-      text-align:center;
-      font-size:16px;
-      font-weight:bold;
-      text-decoration:none;
-      transition:0.3s;
-      max-width:250px;
-      width:100%;
-      color:white;
+    .prev, .next {
+        cursor:pointer; position:absolute; top:50%; transform:translateY(-50%);
+        padding:16px; color:white; font-weight:bold; font-size:18px;
+        border-radius:50%; user-select:none; background:rgba(0,0,0,0.5);
     }
-    .btn-wa { background:#25d366; }
-    .btn-wa:hover { background:#1ebe57; }
-    .btn-lokasi { background:#007bff; }
-    .btn-lokasi:hover { background:#0056b3; }
-    .btn-produk { background:#ff9800; }
-    .btn-produk:hover { background:#e68900; }
-  </style>
-</head>
-<body>
+    .next { right:10px; }
+    .prev { left:10px; }
+    .prev:hover, .next:hover { background:rgba(0,0,0,0.8); }
 
-  <!-- Slideshow -->
-  <div class="slideshow-container">
-    <a href="https://www.instagram.com/njrcell88" target="_blank" class="mySlides"><img src="img/1.webp"></a>
-    <a href="https://www.tiktok.com/@njrcell" target="_blank" class="mySlides"><img src="img/3.webp"></a>
-    <a href="https://www.instagram.com/njrcell88" target="_blank" class="mySlides"><img src="img/4.webp"></a>
-    <a href="https://www.tiktok.com/@njrcell" target="_blank" class="mySlides"><img src="img/5.webp"></a>
-    <a href="https://www.instagram.com/njrcell88" target="_blank" class="mySlides"><img src="img/6.webp"></a>
-    <a href="https://www.tiktok.com/@njrcell" target="_blank" class="mySlides"><img src="img/7.webp"></a>
-    <a href="https://www.instagram.com/njrcell88" target="_blank" class="mySlides"><img src="img/8.webp"></a>
-    <a href="https://www.tiktok.com/@njrcell" target="_blank" class="mySlides"><img src="img/9.webp"></a>
-    <a href="https://www.instagram.com/njrcell88" target="_blank" class="mySlides"><img src="img/imgbanner.png"></a>
+    .dot-container { text-align:center; padding:10px 0; }
+    .dot {
+        cursor:pointer; height:12px; width:12px; margin:0 4px;
+        background-color:#bbb; border-radius:50%; display:inline-block;
+        transition: background-color 0.6s ease;
+    }
+    .active, .dot:hover { background-color:#717171; }
 
-    <a class="prev" onclick="plusSlides(-1)">❮</a>
-    <a class="next" onclick="plusSlides(1)">❯</a>
-  </div>
-  <div class="dot-container">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-    <span class="dot" onclick="currentSlide(4)"></span>
-    <span class="dot" onclick="currentSlide(5)"></span>
-    <span class="dot" onclick="currentSlide(6)"></span>
-    <span class="dot" onclick="currentSlide(7)"></span>
-    <span class="dot" onclick="currentSlide(8)"></span>
-    <span class="dot" onclick="currentSlide(9)"></span>
-  </div>
+    /* Tombol menu */
+    .btn {
+        display:inline-block; 
+        background:linear-gradient(45deg, gold, #e6b800);
+        color:black; padding:12px 20px; 
+        text-decoration:none; border-radius:8px;
+        font-weight:bold; text-align:center; 
+        transition:all 0.3s ease;
+        box-shadow:0 3px 5px rgba(0,0,0,0.2);
+        max-width:250px;   /* Biar tidak kepanjangan */
+        margin:5px auto;   /* Auto center */
+    }
+    .btn:hover { background:linear-gradient(45deg, #ffd700, #ffcc00); transform:scale(1.05); }
 
-  <!-- Tombol -->
-  <div class="btn-container">
-    <a href="https://wa.me/628xxxx" class="btn-wa">Chat WhatsApp</a>
-  </div>
-  <div class="btn-container">
-    <a href="https://maps.google.com?q=Sukajadi" class="btn-lokasi">Lokasi Sukajadi</a>
-  </div>
-  <div class="btn-container">
-    <a href="https://maps.google.com?q=Ciherang" class="btn-lokasi">Lokasi Ciherang</a>
-  </div>
-  <div class="btn-container">
-    <a href="produk.html" class="btn-produk">Lihat Produk</a>
-  </div>
-
-  <script>
-    let slideIndex = 0;
-    showSlides();
-
-    function plusSlides(n) { showSlides(slideIndex += n); }
-    function currentSlide(n) { showSlides(slideIndex = n-1); }
-
-    function showSlides(n) {
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
-
-      if (n >= slides.length) { slideIndex = 0; }
-      if (n < 0) { slideIndex = slides.length-1; }
-
-      for (let i=0; i<slides.length; i++) { slides[i].style.display="none"; }
-      for (let i=0; i<dots.length; i++) { dots[i].className = dots[i].className.replace(" active",""); }
-
-      slides[slideIndex].style.display="block";
-      dots[slideIndex].className += " active";
+    /* Menu grid dibagi 3 */
+    .menu-grid {
+        display:grid; grid-template-columns:repeat(3, 1fr);
+        gap:10px; max-width:800px; margin:auto;
     }
 
-    setInterval(()=>{ plusSlides(1); }, 6000); // auto-slide 6 detik
-  </script>
+    /* Map section */
+    .map-section { margin:20px 0; text-align:center; }
+    .map-section img { border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.2); max-width:500px; }
 
-</body>
-</html>
+    /* Sosial media */
+    .social-icons img { width:40px; height:40px; margin:5px; transition:transform 0.2s; }
+    .social-icons img:hover { transform:scale(1.1); }
+    footer { text-align:center; padding:10px; background:#fff3cd; margin-top:20px; }
+
+    /* Responsif */
+    @media(max-width:768px){
+        .slideshow-container { max-width:100%; }
+        .menu-grid { grid-template-columns:repeat(2,1fr); }
+    }
+    @media(max-width:480px){
+        .menu-grid { grid-template-columns:1fr; }
+    }
+</style>
