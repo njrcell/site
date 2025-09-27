@@ -1,4 +1,4 @@
-// Script tombol Copy
+// Script tombol Copy rekening/e-wallet
 document.querySelectorAll('.copy-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     const text = btn.getAttribute('data-text');
@@ -7,4 +7,3 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
     });
   });
 });
-
