@@ -25,11 +25,13 @@ function showSlides(n) {
 }
 setInterval(() => { plusSlides(1); }, 6000);
 
-// === Copy nomor rekening / e-wallet ===
-function copyToClipboard(text) {
-  navigator.clipboard.writeText(text).then(function() {
-    alert("Nomor berhasil dicopy: " + text);
-  }, function(err) {
-    alert("Gagal copy: " + err);
+// Copy nomor rekening ke clipboard
+document.querySelectorAll('.copy-text').forEach(item => {
+  item.style.cursor = "pointer";
+  item.addEventListener('click', () => {
+    const text = item.textContent.trim();
+    navigator.clipboard.writeText(text).then(() => {
+      alert(`Nomor ${text} berhasil disalin!`);
+    });
   });
-}
+});
