@@ -25,13 +25,13 @@ function showSlides(n) {
 }
 setInterval(() => { plusSlides(1); }, 6000);
 
-// Copy nomor rekening ke clipboard
-document.querySelectorAll('.copy-text').forEach(item => {
-  item.style.cursor = "pointer";
-  item.addEventListener('click', () => {
-    const text = item.textContent.trim();
+// Script tombol Copy
+document.querySelectorAll('.copy-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const text = btn.getAttribute('data-text');
     navigator.clipboard.writeText(text).then(() => {
       alert(`Nomor ${text} berhasil disalin!`);
     });
   });
 });
+
