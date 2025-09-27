@@ -72,3 +72,15 @@ footer { text-align:center; padding:10px; background:#fff3cd; margin-top:20px; }
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
+button {
+  margin-left: 8px;
+  padding: 3px 6px;
+  font-size: 12px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #f4f4f4;
+}
+button:hover {
+  background: #ddd;
+}
