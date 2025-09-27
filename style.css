@@ -84,3 +84,38 @@ button {
 button:hover {
   background: #ddd;
 }
+.rekening-list {
+  max-width: 450px;
+  margin: 15px 0;
+  font-size: 16px;
+}
+
+.rekening-item {
+  display: flex;
+  align-items: center;
+  margin: 6px 0;
+}
+
+.rekening-item .bank {
+  width: 100px;  /* biar rata sejajar */
+  font-weight: bold;
+}
+
+.rekening-item .nomor {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.copy-btn {
+  background: #ffcc00;
+  border: none;
+  padding: 3px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.copy-btn:hover {
+  background: #ffaa00;
+}
