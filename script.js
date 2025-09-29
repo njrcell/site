@@ -7,3 +7,10 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
     });
   });
 });
+// Script tombol Download QRIS
+document.getElementById('downloadQRIS').addEventListener('click', () => {
+  const link = document.createElement('a');
+  link.href = document.getElementById('qrisImage').src;
+  link.download = "QRIS_NJR_CELL.png";
+  link.click();
+});
