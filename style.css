@@ -119,3 +119,11 @@ button:hover {
 .copy-btn:hover {
   background: #ffaa00;
 }
+
+#downloadQRIS {
+  background: #28a745;
+  color: white;
+}
+#downloadQRIS:hover {
+  background: #218838;
+}
