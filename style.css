@@ -138,3 +138,49 @@ section{max-width:1000px;margin:0 auto 40px;padding:20px;}
 header p{max-width:700px;margin:10px auto;font-size:16px;color:#fff;}
 @media(min-width:992px){.menu-grid{grid-template-columns:repeat(4,1fr);gap:16px;max-width:900px;}}
 @media(min-width:1024px){.rekening-list{font-size:17px;}#qrisImage{max-width:260px;}}
+
+
+/* === RAPIKAN GRID TOMBOL === */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 14px 0;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #ffcf00, #e6b800);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+.btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #ffd500, #ffbf00);
+}
+
+@media (min-width: 992px) {
+  .menu-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.services {
+  text-align: center;
+  padding: 20px 0 40px;
+}
+
+/* Lebar halaman lebih lega */
+.site-wrapper {
+  max-width: 1400px;
+  width: 95%;
+  margin: 0 auto;
+  background: #fffbea;
+}
