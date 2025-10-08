@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="site-wrapper">
 
 <header>
     <img src="img/njrcell.png" alt="Logo NJR Cell" class="logo">
@@ -15,7 +16,6 @@
     <p>💡 Solusi Cepat & Aman! Pulsa, Paket Data, Token PLN, TopUp Game, Hingga Transfer & Tarik Tunai 24 Jam</p>
 </header>
 
-<!-- Slideshow -->
 <div class="slideshow-container">
     <a href="https://www.instagram.com/njrcell88" target="_blank" class="mySlides"><img src="img/1.png"></a>
     <a href="https://www.tiktok.com/@njrcell" target="_blank" class="mySlides"><img src="img/3.png"></a>
@@ -27,10 +27,10 @@
     <a href="https://www.tiktok.com/@njrcell" target="_blank" class="mySlides"><img src="img/9.png"></a>
     <a href="https://www.instagram.com/njrcell88" target="_blank" class="mySlides"><img src="img/10.png"></a>
     <a href="https://www.instagram.com/njrcell88" target="_blank" class="mySlides"><img src="img/imgbanner.png"></a>
-
     <a class="prev" onclick="plusSlides(-1)">❮</a>
     <a class="next" onclick="plusSlides(1)">❯</a>
 </div>
+
 <div class="dot-container">
     <span class="dot" onclick="currentSlide(1)"></span>
     <span class="dot" onclick="currentSlide(2)"></span>
@@ -43,7 +43,6 @@
     <span class="dot" onclick="currentSlide(9)"></span>
 </div>
 
-<!-- MENU ONLINE -->
 <section class="services">
     <h2 style="text-align:center;">Transaksi Online 24 JAM</h2>
     <div class="menu-grid">
@@ -59,7 +58,6 @@
     </div>
 </section>
 
-<!-- MENU OFFLINE -->
 <section style="background-color:#fff7e6; padding:20px 0;">
     <h2 style="text-align:center;">Layanan Offline (Datang ke Toko)</h2>
     <div class="menu-grid">
@@ -75,74 +73,33 @@
     </p>
 </section>
 
-<!-- PEMBAYARAN & TARIK TUNAI -->
-<section style="background:#fff7e6; padding:20px; margin-top:20px; border-radius:10px;">
-  <h2 style="text-align:center; margin-bottom:15px;">Pembayaran & Tarik Tunai</h2>
-  <div style="display:flex; flex-wrap:wrap; align-items:flex-start; justify-content:center; gap:20px;">
-
-    <!-- Kolom kiri: info rekening & e-wallet -->
-    <div style="flex:1; min-width:250px;">
-      <p>Untuk kemudahan transaksi, Anda dapat melakukan pembayaran atau transfer ke rekening / e-wallet / QRIS berikut. 
-      Setelah transfer, silakan tunjukkan bukti untuk pengambilan uang tunai di outlet NJR CELL.</p>
-        <br>
-        <br>
-      <div class="rekening-list">
-        <div class="rekening-item">
-          <span class="bank">Mandiri</span> 
-          <span class="nomor">1770 0065 9439 1</span>
-          <button class="copy-btn" data-text="1770006594391">Copy</button>
-        </div>
-        <div class="rekening-item">
-          <span class="bank">BRI</span> 
-          <span class="nomor">4013 0100 9880 537</span>
-          <button class="copy-btn" data-text="401301009880537">Copy</button>
-        </div>
-        <div class="rekening-item">
-          <span class="bank">SeaBank</span> 
-          <span class="nomor">9011 4590 5769</span>
-          <button class="copy-btn" data-text="901145905769">Copy</button>
-        </div>
-        <div class="rekening-item">
-          <span class="bank">DANA</span> 
-          <span class="nomor">0821 2000 0303</span>
-          <button class="copy-btn" data-text="082120000303">Copy</button>
-        </div>
-        <div class="rekening-item">
-          <span class="bank">ShopeePay</span> 
-          <span class="nomor">0821 2000 0303</span>
-          <button class="copy-btn" data-text="082120000303">Copy</button>
-        </div>
-      </div>
-        <br>
-      <p><strong>a.n. AMIR NURJAMAN</strong></p>
-        <br>
-        <br>
-      <p style="font-size:14px; color:#b22222; margin-top:10px;">
-⚠️ Simpan bukti transfer untuk mempercepat proses di konter.<br>
-⚠️ Nomor rekening resmi NJR CELL hanya yang tercantum di website ini.<br>
-⚠️ Abaikan jika ada pihak lain yang mengaku dari NJR CELL dengan nomor berbeda.
-</p>
-
+<section class="payment-section">
+  <div class="payment-left">
+    <h2 style="text-align:center;">Pembayaran & Tarik Tunai</h2>
+    <p>Untuk kemudahan transaksi, Anda dapat melakukan pembayaran atau transfer ke rekening / e-wallet / QRIS berikut. Setelah transfer, silakan tunjukkan bukti untuk pengambilan uang tunai di outlet NJR CELL.</p>
+    <div class="rekening-list">
+      <div class="rekening-item"><span class="bank">Mandiri</span><span class="nomor">1770 0065 9439 1</span><button class="copy-btn" data-text="1770006594391">Copy</button></div>
+      <div class="rekening-item"><span class="bank">BRI</span><span class="nomor">4013 0100 9880 537</span><button class="copy-btn" data-text="401301009880537">Copy</button></div>
+      <div class="rekening-item"><span class="bank">SeaBank</span><span class="nomor">9011 4590 5769</span><button class="copy-btn" data-text="901145905769">Copy</button></div>
+      <div class="rekening-item"><span class="bank">DANA</span><span class="nomor">0821 2000 0303</span><button class="copy-btn" data-text="082120000303">Copy</button></div>
+      <div class="rekening-item"><span class="bank">ShopeePay</span><span class="nomor">0821 2000 0303</span><button class="copy-btn" data-text="082120000303">Copy</button></div>
     </div>
-      <!-- Kolom kanan: QRIS -->
-<div style="flex:1; min-width:250px; text-align:center;">
-  <p><strong>Scan QRIS untuk Pembayaran:</strong></p>
-  <img id="qrisImage" src="img/qris.png" alt="QRIS NJR CELL" style="max-width:220px; border:1px solid #ddd; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.2);">
-  
-  <!-- Tombol Download -->
-  <div style="margin-top:10px;">
-    <button class="copy-btn" id="downloadQRIS">Download QRIS</button>
+    <p><strong>a.n. AMIR NURJAMAN</strong></p>
+    <p style="font-size:14px; color:#b22222;">
+    ⚠️ Simpan bukti transfer untuk mempercepat proses di konter.<br>
+    ⚠️ Nomor rekening resmi NJR CELL hanya yang tercantum di website ini.<br>
+    ⚠️ Abaikan jika ada pihak lain yang mengaku dari NJR CELL dengan nomor berbeda.</p>
   </div>
-  
-  <p style="margin-top:8px;">NMID: <strong>ID1020035674883</strong><br>
-  a.n. <strong>NJR CELL</strong></p>
-</div>
-
-
+  <div class="payment-right" style="text-align:center;">
+    <p><strong>Scan QRIS untuk Pembayaran:</strong></p>
+    <img id="qrisImage" src="img/qris.png" alt="QRIS NJR CELL" style="max-width:220px;">
+    <div style="margin-top:10px;">
+      <button class="copy-btn" id="downloadQRIS">Download QRIS</button>
+    </div>
+    <p style="margin-top:8px;">NMID: <strong>ID1020035674883</strong><br>a.n. <strong>NJR CELL</strong></p>
   </div>
 </section>
 
-<!-- LOKASI SUKAJADI -->
 <section class="map-section sukajadi">
     <h2>NJR Cell Sukajadi</h2>
     <p class="alamat">Jln.Sukajadi Rt 006 Rw 002 Desa Sukajadi kec.Pamarican Kab.Ciamis (Samping Sekolah MAN 4 Ciamis)</p>
@@ -152,7 +109,6 @@
     </a>
 </section>
 
-<!-- LOKASI CIHERANG -->
 <section class="map-section ciherang">
     <h2>NJR Cell Ciherang</h2>
     <p class="alamat">Jln.Pangandaran No 84 desa Ciherang Rt 005 Rw 001 Desa Ciherang kec.Banjarsari Kab.Ciamis (Samping Sekolah MAN 4 Ciamis)</p>
@@ -162,13 +118,11 @@
     </a>
 </section>
 
-<!-- PRODUK -->
 <section class="services" style="text-align:center;">
     <h2>Produk Pelindung Handphone</h2>
     <a href="https://njrcellciherang.my.canva.site/hydrogel" class="btn" target="_blank">Lihat Produk</a>
 </section>
 
-<!-- FOOTER -->
 <footer>
     <h3>Ikuti Kami</h3>
     <div class="social-icons">
@@ -185,18 +139,17 @@ showSlides(slideIndex);
 function plusSlides(n){ showSlides(slideIndex += n); }
 function currentSlide(n){ showSlides(slideIndex = n); }
 function showSlides(n){
-    let i;
     let slides=document.getElementsByClassName("mySlides");
     let dots=document.getElementsByClassName("dot");
     if(n>slides.length){ slideIndex=1 }
     if(n<1){ slideIndex=slides.length }
-    for(i=0;i<slides.length;i++){ slides[i].style.display="none"; }
-    for(i=0;i<dots.length;i++){ dots[i].className=dots[i].className.replace(" active",""); }
+    for(let i=0;i<slides.length;i++){ slides[i].style.display="none"; }
+    for(let i=0;i<dots.length;i++){ dots[i].className=dots[i].className.replace(" active",""); }
     slides[slideIndex-1].style.display="block";
     dots[slideIndex-1].className += " active";
 }
 setInterval(()=>{ plusSlides(1); }, 6000);
 </script>
-
+</div>
 </body>
 </html>
