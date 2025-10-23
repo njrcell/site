@@ -216,3 +216,36 @@ header p{max-width:700px;margin:10px auto;font-size:16px;color:#fff;}
 /* Wrapper halaman (opsional) */
 body{ display:flex; justify-content:center; }
 .site-wrapper{ max-width:1400px; width:95%; margin:0 auto; background:#fffbea; }
+/* Wrapper halaman (opsional) */
+body{ display:flex; justify-content:center; }
+.site-wrapper{ max-width:1400px; width:95%; margin:0 auto; background:#fffbea; }
+
+/* === Harga (iframe) di bagian bawah === */
+.price-section{ ... }
+.price-embed iframe{ ... }
+
+/* ---- Tambahan: Perapihan angka rekening ---- */
+.rekening-list {
+  font-variant-numeric: tabular-nums;
+}
+.rekening-item {
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  align-items: center;
+  column-gap: 12px;
+}
+.rekening-item .bank {
+  font-weight: 700;
+  text-align: left;
+}
+.rekening-item .nomor {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.copy-btn {
+  min-width: 64px;
+}
+@media (max-width: 480px) {
+  .rekening-item { grid-template-columns: 95px 1fr auto; }
+}
