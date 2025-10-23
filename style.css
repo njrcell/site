@@ -1,215 +1,152 @@
+/* =========================================================
+   NJR Cell — STYLE.CSS (versi rapi & aman)
+   - Tidak ada display:flex global di <body>
+   - Tombol & grid rapi di mobile & desktop
+   - Bagian rekening dirapikan khusus (angka sejajar)
+   - Slideshow responsif
+   - Section Harga (iframe) siap pakai
+   ========================================================= */
+
+/* ---------- Base ---------- */
 body { font-family: Arial, sans-serif; margin:0; background:#fffbea; }
 img { max-width:100%; height:auto; }
-.logo { max-width:150px; margin-top:10px; border-radius:50%; box-shadow:0 4px 10px rgba(0,0,0,0.3); }
-header { background: linear-gradient(135deg, #ffcc00, #ff9900); text-align:center; padding:20px 0; color:white; }
 h1 { margin:10px 0 0; font-size:2em; }
 
-/* Slideshow */
-.slideshow-container { position:relative; max-width:900px; margin:20px auto; overflow:hidden; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.2); }
+/* Header */
+header {
+  background: linear-gradient(135deg, #ffcc00, #ff9900);
+  text-align:center;
+  padding:20px 0;
+  color:white;
+}
+.logo {
+  max-width:150px;
+  margin-top:10px;
+  border-radius:50%;
+  box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* ---------- Slideshow ---------- */
+.slideshow-container {
+  position:relative;
+  max-width:900px;
+  margin:20px auto;
+  overflow:hidden;
+  border-radius:10px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
 .mySlides { display:none; animation: fade 1.5s; position: relative; }
 .mySlides img { display:block; width:100%; height:auto; border-radius:10px; }
 @keyframes fade { from {opacity:.3} to {opacity:1} }
-.prev, .next { cursor:pointer; position:absolute; top:50%; transform:translateY(-50%); padding:16px; color:white; font-weight:bold; font-size:18px; border-radius:50%; user-select:none; background:rgba(0,0,0,0.5); }
-.next { right:10px; }
-.prev { left:10px; }
+.prev, .next {
+  cursor:pointer; position:absolute; top:50%; transform:translateY(-50%);
+  padding:16px; color:white; font-weight:bold; font-size:18px;
+  border-radius:50%; user-select:none; background:rgba(0,0,0,0.5);
+}
+.next { right:10px; } .prev { left:10px; }
 .prev:hover, .next:hover { background:rgba(0,0,0,0.8); }
 .dot-container { text-align:center; padding:10px 0; }
-.dot { cursor:pointer; height:12px; width:12px; margin:0 4px; background-color:#bbb; border-radius:50%; display:inline-block; transition: background-color 0.6s ease; }
+.dot {
+  cursor:pointer; height:12px; width:12px; margin:0 4px;
+  background-color:#bbb; border-radius:50%; display:inline-block;
+  transition: background-color 0.6s ease;
+}
 .active, .dot:hover { background-color:#717171; }
 
-/* Tombol */
-.btn { display:inline-block; background:linear-gradient(45deg, gold, #e6b800); color:black; padding:12px 20px; text-decoration:none; border-radius:8px; font-weight:bold; text-align:center; transition:all 0.3s ease; box-shadow:0 3px 5px rgba(0,0,0,0.2); max-width:250px; margin:8px auto; }
-.btn:hover { background:linear-gradient(45deg, #ffd700, #ffcc00); transform:scale(1.05); }
+/* ---------- Buttons & Menu Grid ---------- */
+.btn {
+  display:block;
+  width:100%;
+  padding:14px 0;
+  border-radius:10px;
+  background:linear-gradient(45deg, #ffcf00, #e6b800);
+  box-shadow:0 3px 6px rgba(0,0,0,0.2);
+  color:#000;
+  text-decoration:none;
+  font-weight:600;
+  text-align:center;
+  transition:all .2s ease;
+}
+.btn:hover { transform:scale(1.05); background:linear-gradient(45deg, #ffd500, #ffbf00); }
 
-/* Menu grid */
-.menu-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:10px; max-width:800px; margin:auto; }
+.menu-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap:15px;
+  max-width:1000px;
+  margin:0 auto;
+  justify-items:center;
+}
 
-/* Map */
+.services{ text-align:center; padding:20px 0 40px; }
+
+/* ---------- Map Sections ---------- */
 .map-section { margin:20px auto; padding:20px; text-align:center; border-radius:10px; max-width:900px; }
-.map-section img { border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.2); max-width:100%; }
+.map-section img { border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.2); }
 .map-section .alamat { margin:10px 0; font-size:14px; }
-
-/* Bedakan lokasi */
 .map-section.sukajadi { background:#fff7e6; }
 .map-section.ciherang { background:#e6f7ff; }
 
-/* Sosial */
-.social-icons img { width:40px; height:40px; margin:5px; transition:transform 0.2s; }
+/* ---------- Social & Footer ---------- */
+.social-icons img { width:40px; height:40px; margin:5px; transition:transform .2s; }
 .social-icons img:hover { transform:scale(1.1); }
 footer { text-align:center; padding:10px; background:#fff3cd; margin-top:20px; }
 
-/* Responsive */
-@media(max-width:768px){ .slideshow-container { max-width:100%; } .menu-grid { grid-template-columns:repeat(2,1fr); } }
-@media(max-width:480px){ .menu-grid { grid-template-columns:1fr; } }
-
-
-/* --- Perbaikan Tombol & Layout --- */
-.btn {
-  display: inline-block;
-  background: linear-gradient(45deg, gold, #e6b800);
-  color: black;
-  padding: 12px 20px;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  text-align: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 3px 5px rgba(0,0,0,0.2);
-  max-width: 200px;   /* batas biar tidak kepanjangan */
-  width: 100%;        /* isi kolom grid */
+/* ---------- Payment Section (kiri-kanan, responsif) ---------- */
+.payment-section{
+  display:flex; flex-wrap:wrap; gap:30px;
+  justify-content:space-between; align-items:flex-start; margin-top:30px;
+}
+.payment-section > div{
+  flex:1 1 400px; background:#fffdf2; padding:15px; border-radius:10px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
 }
 
-.slideshow-container {
-  max-width: 900px;   /* supaya di desktop tidak melebar penuh */
-  margin: 20px auto;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.map-section img {
-  max-width: 600px;   /* peta tidak terlalu besar di PC */
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
+/* Copy buttons & rekening list (umum) */
 button {
-  margin-left: 8px;
-  padding: 3px 6px;
-  font-size: 12px;
-  cursor: pointer;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background: #f4f4f4;
+  margin-left: 8px; padding: 3px 6px; font-size: 12px; cursor: pointer;
+  border: 1px solid #ccc; border-radius: 6px; background: #f4f4f4;
 }
-button:hover {
-  background: #ddd;
-}
-.rekening-list {
-  max-width: 450px;
-  margin: 15px 0;
-  font-size: 16px;
-}
+button:hover { background:#ddd; }
 
-.rekening-item {
-  display: flex;
-  align-items: center;
-  margin: 6px 0;
-}
-
-.rekening-item .bank {
-  width: 100px;  /* supaya sejajar */
-  font-weight: bold;
-}
-
+/* ---------- Khusus: Perapihan Angka Rekening ---------- */
+.rekening-list { max-width: 450px; margin: 15px 0; font-size: 16px; font-variant-numeric: tabular-nums; }
+.rekening-item { display:grid; grid-template-columns: 120px 1fr auto; align-items:center; column-gap:12px; margin:6px 0; }
+.rekening-item .bank { font-weight:700; text-align:left; }
 .rekening-item .nomor {
-  flex: 1;
-  margin-right: 10px;
+  flex:1; margin-right:10px;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  letter-spacing: .02em; white-space: nowrap;
 }
-
 .copy-btn {
-  background: #ffcc00;
-  border: none;
-  padding: 3px 8px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 13px;
-  transition: 0.2s;
+  background:#ffcc00; border:none; padding:3px 8px; border-radius:5px;
+  cursor:pointer; font-size:13px; transition:.2s; min-width:64px;
 }
+.copy-btn:hover { background:#ffaa00; }
+#downloadQRIS{ background:#28a745; color:#fff; }
+#downloadQRIS:hover{ background:#218838; }
 
-.copy-btn:hover {
-  background: #ffaa00;
-}
-
-#downloadQRIS {
-  background: #28a745;
-  color: white;
-}
-#downloadQRIS:hover {
-  background: #218838;
-}
-
-
-/* -------------------- RESPONSIVE DESKTOP FIX -------------------- */
-body {display:flex;justify-content:center;}
-.site-wrapper{max-width:1100px;width:100%;background:#fffbea;}
-.payment-section{display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;align-items:flex-start;margin-top:30px;}
-.payment-section>div{flex:1 1 400px;background:#fffdf2;padding:15px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.1);}
-section{max-width:1000px;margin:0 auto 40px;padding:20px;}
-header p{max-width:700px;margin:10px auto;font-size:16px;color:#fff;}
-@media(min-width:992px){.menu-grid{grid-template-columns:repeat(4,1fr);gap:16px;max-width:900px;}}
-@media(min-width:1024px){.rekening-list{font-size:17px;}#qrisImage{max-width:260px;}}
-
-
-/* === RAPIKAN GRID TOMBOL === */
-.menu-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
-  max-width: 1000px;
-  margin: 0 auto;
-  justify-items: center;
-}
-
-.btn {
-  display: block;
-  width: 100%;
-  padding: 14px 0;
-  border-radius: 10px;
-  background: linear-gradient(45deg, #ffcf00, #e6b800);
-  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-  font-weight: 600;
-  text-align: center;
-  transition: all 0.2s ease;
-}
-.btn:hover {
-  transform: scale(1.05);
-  background: linear-gradient(45deg, #ffd500, #ffbf00);
-}
-
-@media (min-width: 992px) {
-  .menu-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-.services {
-  text-align: center;
-  padding: 20px 0 40px;
-}
-
-/* Lebar halaman lebih lega */
-.site-wrapper {
-  max-width: 1400px;
-  width: 95%;
-  margin: 0 auto;
-  background: #fffbea;
-}
-/* === Harga (iframe) di bagian bawah === */
+/* ---------- Harga (iframe) di bagian bawah ---------- */
 .price-section{
-  background:#fffdf2;
-  border-radius:10px;
-  box-shadow:0 2px 6px rgba(0,0,0,0.08);
-  max-width:1000px;
-  margin:30px auto;
-  padding:20px;
+  background:#fffdf2; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.08);
+  max-width:1000px; margin:30px auto; padding:20px;
 }
-.price-section h2{
-  text-align:center;
-  margin-top:0;
+.price-section h2{ text-align:center; margin-top:0; }
+.price-embed{ width:100%; height:70vh; min-height:520px; }
+.price-embed iframe{ width:100%; height:100%; border:0; border-radius:8px; background:#fff; display:block; }
+
+/* ---------- Responsive ---------- */
+@media(max-width:768px){
+  .slideshow-container{ max-width:100%; }
+  .menu-grid{ grid-template-columns: 1fr; max-width:100%; }
+  .rekening-item{ grid-template-columns:95px 1fr auto; }
+  header p { padding: 0 12px; }
 }
-.price-embed{
-  width:100%;
-  height:70vh;        /* proporsional layar desktop */
-  min-height:520px;   /* aman untuk konten panjang */
+@media(max-width:480px){
+  .menu-grid{ grid-template-columns: 1fr; }
 }
-.price-embed iframe{
-  width:100%;
-  height:100%;
-  border:0;
-  border-radius:8px;
-  background:#fff;
-  display:block;
-}
-@media (max-width:768px){
-  .price-embed{ height:75vh; min-height:600px; } /* ruang ekstra di HP */
+
+/* ---------- Optional: batas lebar nyaman di desktop ---------- */
+@media (min-width:1200px){
+  .site-wrapper { max-width:1200px; margin:0 auto; padding:0 16px; }
 }
