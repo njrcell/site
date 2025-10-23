@@ -213,39 +213,39 @@ header p{max-width:700px;margin:10px auto;font-size:16px;color:#fff;}
 @media (max-width:768px){
   .price-embed{ height:75vh; min-height:600px; } /* ruang ekstra di HP */
 }
-/* Wrapper halaman (opsional) */
-body{ display:flex; justify-content:center; }
-.site-wrapper{ max-width:1400px; width:95%; margin:0 auto; background:#fffbea; }
-/* Wrapper halaman (opsional) */
-body{ display:flex; justify-content:center; }
-.site-wrapper{ max-width:1400px; width:95%; margin:0 auto; background:#fffbea; }
+/* ==== HOTFIX: kembalikan layout umum agar tidak ikut berubah ==== */
 
-/* === Harga (iframe) di bagian bawah === */
-.price-section{ ... }
-.price-embed iframe{ ... }
-
-/* ---- Tambahan: Perapihan angka rekening ---- */
-.rekening-list {
-  font-variant-numeric: tabular-nums;
+/* 1) Jangan pakai flex di <body> untuk mobile (biar alur normal) */
+@media (max-width: 992px) {
+  body { display: block !important; }
+  .site-wrapper { width: 100% !important; max-width: 100% !important; margin: 0 !important; }
 }
+
+/* 2) Grid tombol: rapikan di mobile/tablet */
+@media (max-width: 768px) {
+  .menu-grid { grid-template-columns: 1fr !important; max-width: 100% !important; }
+  .btn { width: 100% !important; max-width: none !important; }
+}
+
+/* 3) Slideshow & header: biar melebar sesuai layar */
+@media (max-width: 768px) {
+  .slideshow-container { max-width: 100% !important; margin-left: auto; margin-right: auto; }
+  header p { padding: 0 12px; }
+}
+
+/* 4) Pastikan hanya area rekening yang pakai grid khusus */
 .rekening-item {
   display: grid;
   grid-template-columns: 120px 1fr auto;
   align-items: center;
   column-gap: 12px;
 }
-.rekening-item .bank {
-  font-weight: 700;
-  text-align: left;
-}
-.rekening-item .nomor {
-  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
-  letter-spacing: 0.02em;
-  white-space: nowrap;
-}
-.copy-btn {
-  min-width: 64px;
-}
 @media (max-width: 480px) {
   .rekening-item { grid-template-columns: 95px 1fr auto; }
 }
+.rekening-list { font-variant-numeric: tabular-nums; }
+.rekening-item .nomor {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  letter-spacing: .02em; white-space: nowrap;
+}
+.copy-btn { min-width: 64px; }
