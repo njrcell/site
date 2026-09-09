@@ -13,16 +13,16 @@ h2{font-size:clamp(1.7rem,3vw,3rem);margin:10px 0}
 p{line-height:1.65;color:var(--muted)}
 header{position:relative;isolation:isolate;text-align:center;margin:0 -18px 24px;padding:54px 20px 44px;background:linear-gradient(180deg,#050706 0%,#071008 65%,#050607 100%);border-bottom:1px solid var(--border);overflow:hidden}
 header:after{content:"";position:absolute;inset:auto -10% -45% -10%;height:65%;background:radial-gradient(circle,rgba(57,255,20,.25),transparent 65%);filter:blur(20px);z-index:-1}
-.logo{max-width:140px;margin-top:10px;border-radius:28px;padding:10px;background:rgba(0,0,0,.35);border:1px solid rgba(57,255,20,.4);box-shadow:0 0 20px rgba(57,255,20,.3),0 18px 40px rgba(0,0,0,.55);transform:translateZ(0);animation:floatLogo 4s ease-in-out infinite}
+.logo{max-width:164px;margin-top:10px;border-radius:28px;padding:10px;background:rgba(0,0,0,.35);border:1px solid rgba(57,255,20,.4);box-shadow:0 0 20px rgba(57,255,20,.3),0 18px 40px rgba(0,0,0,.55);transform:translateZ(0);animation:floatLogo 4s ease-in-out infinite}
 .hero-orb{position:absolute;border-radius:50%;filter:blur(2px);box-shadow:0 0 45px rgba(57,255,20,.28);opacity:.65;z-index:-1}
 .hero-orb-one{width:240px;height:240px;left:-90px;top:-80px;background:radial-gradient(circle,rgba(57,255,20,.23),transparent 68%)}
 .hero-orb-two{width:260px;height:260px;right:-110px;bottom:-120px;background:radial-gradient(circle,rgba(57,255,20,.16),transparent 68%)}
 @keyframes floatLogo{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-.slideshow-container{position:relative;max-width:980px;margin:22px auto;overflow:hidden;border-radius:24px;border:1px solid rgba(57,255,20,.35);box-shadow:0 20px 70px rgba(0,0,0,.55),0 0 30px rgba(57,255,20,.09);background:#030504}
-.mySlides{display:none;animation:fade .8s;position:relative}
-.mySlides img{display:block;width:100%;height:auto;border-radius:24px}
+.slideshow-container{position:relative;width:100%;max-width:980px;margin:22px auto;overflow:hidden;border-radius:24px;border:1px solid rgba(57,255,20,.35);box-shadow:0 20px 70px rgba(0,0,0,.55),0 0 30px rgba(57,255,20,.09);background:#030504;display:block;}
+.mySlides{display:none;animation:fade .8s;position:relative;width:100%;text-align:center}
+.mySlides img{display:block;width:100%;max-width:100%;height:auto;margin:0 auto;border-radius:24px;object-fit:contain}
 @keyframes fade{from{opacity:.25;transform:scale(1.02)}to{opacity:1;transform:scale(1)}}
-.prev,.next{cursor:pointer;position:absolute;top:50%;transform:translateY(-50%);padding:12px 15px;color:var(--neon);font-weight:bold;font-size:20px;border-radius:15px;user-select:none;background:rgba(2,7,3,.66);border:1px solid rgba(57,255,20,.35);backdrop-filter:blur(12px);box-shadow:0 0 18px rgba(57,255,20,.12);transition:.25s}
+.prev,.next{cursor:pointer;position:absolute;top:50%;transform:translateY(-50%);padding:12px 15px;color:var(--neon);font-weight:bold;font-size:20px;border-radius:15px;user-select:none;background:rgba(2,7,3,.66);border:1px solid rgba(57,255,20,.35);backdrop-filter:blur(12px);box-shadow:0 0 18px rgba(57,255,20,.12);transition:.25s;z-index:2}
 .next{right:12px}.prev{left:12px}.prev:hover,.next:hover{transform:translateY(-50%) scale(1.07);box-shadow:0 0 25px rgba(57,255,20,.3)}
 .dot-container{text-align:center;padding:8px 0 24px}
 .dot{cursor:pointer;height:9px;width:9px;margin:0 4px;background:#334237;border-radius:50%;display:inline-block;transition:.3s;box-shadow:0 0 0 transparent}
@@ -65,6 +65,6 @@ footer{text-align:center;padding:34px 12px;background:linear-gradient(180deg,#07
 .price-section h2{text-align:center;margin-top:10px}
 .price-embed{width:100%;height:70vh;min-height:520px;margin-top:18px}.price-embed iframe{width:100%;height:100%;border:0;border-radius:16px;background:#fff;display:block}
 .price-note{text-align:center;font-size:13px}
-@media(max-width:768px){.site-wrapper{padding:0 12px}.payment-section{gap:14px}.payment-section>div{padding:20px}.rekening-item{grid-template-columns:88px 1fr auto;font-size:13px}.rekening-item .nomor{font-size:12px}.menu-grid{grid-template-columns:1fr}.slideshow-container{border-radius:18px}.mySlides img{border-radius:18px}header{margin:0 -12px 18px;padding:42px 14px 34px}}
+@media(max-width:768px){.site-wrapper{padding:0 12px}.payment-section{gap:14px}.payment-section>div{padding:20px}.rekening-item{grid-template-columns:88px 1fr auto;font-size:13px}.rekening-item .nomor{font-size:12px}.menu-grid{grid-template-columns:1fr}.slideshow-container{width:100%;border-radius:18px}.mySlides img{border-radius:18px}header{margin:0 -12px 18px;padding:42px 14px 34px}.logo{max-width:150px}}
 @media(max-width:480px){h1{font-size:2.2rem}.rekening-item{grid-template-columns:78px 1fr auto;column-gap:8px}.rekening-item .nomor{font-size:11px}.copy-btn{padding:7px 8px}.price-section{padding:18px}.price-embed{min-height:420px;height:62vh}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
