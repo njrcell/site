@@ -21,7 +21,7 @@
 <div class="slideshow-container">
     <a href="https://www.instagram.com/njrcell88" target="_blank" class="mySlides"><img src="img/promo-transfer-tarik-tunai.png" alt="Promo Transfer & Tarik Tunai NJR CELL"></a>
     <a href="https://www.instagram.com/njrcell88" target="_blank" class="mySlides"><img src="img/promo.png" alt="Promo NJR Cell"></a>
-    <a href="https://www.instagram.com/njrcell88" target="_blank" class="mySlides"><img src="img/1.png" alt="Promo NJR Cell"></a>
+    <a href="https://www.instagram.com/njrcell88" target="_blank" class="mySlides"><img src="img/Top Up Game & E-Wallet.png" alt="Top Up Game & E-Wallet NJR CELL"></a>
     <a href="https://www.tiktok.com/@njrcell" target="_blank" class="mySlides"><img src="img/3.png" alt="Promo NJR Cell"></a>
     <a href="https://www.instagram.com/njrcell88" target="_blank" class="mySlides"><img src="img/4.png" alt="Promo NJR Cell"></a>
     <a href="https://www.tiktok.com/@njrcell" target="_blank" class="mySlides"><img src="img/5.png" alt="Promo NJR Cell"></a>
@@ -48,6 +48,7 @@
     <span class="dot" onclick="currentSlide(10)"></span>
     <span class="dot" onclick="currentSlide(11)"></span>
     <span class="dot" onclick="currentSlide(12)"></span>
+    <span class="dot" onclick="currentSlide(13)"></span>
 </div>
 
 <section class="payment-section">
@@ -173,14 +174,18 @@
 <script>
 let slideIndex = 1;
 let slideTimer;
+const SLIDE_DELAY = 5000;
 showSlides(slideIndex);
+startAutoSlide();
 
 function plusSlides(n){
     showSlides(slideIndex += n);
+    restartAutoSlide();
 }
 
 function currentSlide(n){
     showSlides(slideIndex = n);
+    restartAutoSlide();
 }
 
 function showSlides(n){
@@ -191,13 +196,18 @@ function showSlides(n){
     for(let i=0;i<slides.length;i++){ slides[i].style.display="none"; }
     for(let i=0;i<dots.length;i++){ dots[i].className=dots[i].className.replace(" active",""); }
     if(slides.length){ slides[slideIndex-1].style.display="block"; }
-    if(dots.length){ dots[slideIndex-1].className += " active"; }
-    resetSlideTimer();
+    if(dots.length && dots[slideIndex-1]){ dots[slideIndex-1].className += " active"; }
 }
 
-function resetSlideTimer(){
+function startAutoSlide(){
     clearInterval(slideTimer);
-    slideTimer = setInterval(function(){ plusSlides(1); }, 5000);
+    slideTimer = setInterval(() => {
+        showSlides(slideIndex + 1);
+    }, SLIDE_DELAY);
+}
+
+function restartAutoSlide(){
+    startAutoSlide();
 }
 </script>
 </div>
