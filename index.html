@@ -164,32 +164,40 @@
   <span class="eyebrow">LIVE PRICE</span>
   <h2>Daftar Harga</h2>
   <div class="price-embed">
-    <iframe
-      src="https://propana.otoreport.com/harga.js.php?id=3d3a111c9f23b1475dc4a96fa2c333f580fe0bea9887cc9689473bf57dd13dd077aeba62fb02a1329479194c10d4f7fbd032-1243"
-      loading="lazy"
-      title="Daftar harga NJR Cell">
-    </iframe>
+    <iframe src="https://propana.otoreport.com/harga.js.php?id=3d3a111c9f23b1475dc4a96fa2c333f580fe0bea9887cc9689473bf57dd13dd077aeba62fb02a1329479194c10d4f7fbd032-1243" loading="lazy" title="Daftar harga NJR Cell"></iframe>
   </div>
-  <p class="price-note">
-    * Harga dapat berubah sewaktu-waktu mengikuti ketentuan mitra. Periksa kembali sebelum transaksi.
-  </p>
+  <p class="price-note">* Harga dapat berubah sewaktu-waktu mengikuti ketentuan mitra. Periksa kembali sebelum transaksi.</p>
 </section>
 
 <script src="script.js"></script>
 <script>
 let slideIndex = 1;
+let slideTimer;
 showSlides(slideIndex);
-function plusSlides(n){ showSlides(slideIndex += n); }
-function currentSlide(n){ showSlides(slideIndex = n); }
+
+function plusSlides(n){
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n){
+    showSlides(slideIndex = n);
+}
+
 function showSlides(n){
     let slides=document.getElementsByClassName("mySlides");
     let dots=document.getElementsByClassName("dot");
-    if(n>slides.length){ slideIndex=1 }
-    if(n<1){ slideIndex=slides.length }
+    if(n>slides.length){ slideIndex=1; }
+    if(n<1){ slideIndex=slides.length; }
     for(let i=0;i<slides.length;i++){ slides[i].style.display="none"; }
     for(let i=0;i<dots.length;i++){ dots[i].className=dots[i].className.replace(" active",""); }
     if(slides.length){ slides[slideIndex-1].style.display="block"; }
     if(dots.length){ dots[slideIndex-1].className += " active"; }
+    resetSlideTimer();
+}
+
+function resetSlideTimer(){
+    clearInterval(slideTimer);
+    slideTimer = setInterval(function(){ plusSlides(1); }, 5000);
 }
 </script>
 </div>
