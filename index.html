@@ -19,6 +19,7 @@
 </header>
 
 <div class="slideshow-container">
+    <a href="https://www.instagram.com/njrcell88" target="_blank" class="mySlides"><img src="img/promo-transfer-tarik-tunai.png" alt="Promo Transfer & Tarik Tunai NJR CELL"></a>
     <a href="https://www.instagram.com/njrcell88" target="_blank" class="mySlides"><img src="img/promo.png" alt="Promo NJR Cell"></a>
     <a href="https://www.instagram.com/njrcell88" target="_blank" class="mySlides"><img src="img/1.png" alt="Promo NJR Cell"></a>
     <a href="https://www.tiktok.com/@njrcell" target="_blank" class="mySlides"><img src="img/3.png" alt="Promo NJR Cell"></a>
@@ -46,6 +47,7 @@
     <span class="dot" onclick="currentSlide(9)"></span>
     <span class="dot" onclick="currentSlide(10)"></span>
     <span class="dot" onclick="currentSlide(11)"></span>
+    <span class="dot" onclick="currentSlide(12)"></span>
 </div>
 
 <section class="payment-section">
@@ -186,11 +188,9 @@ function showSlides(n){
     if(n<1){ slideIndex=slides.length }
     for(let i=0;i<slides.length;i++){ slides[i].style.display="none"; }
     for(let i=0;i<dots.length;i++){ dots[i].className=dots[i].className.replace(" active",""); }
-    if(!slides.length) return;
-    slides[slideIndex-1].style.display="block";
-    if(dots[slideIndex-1]) dots[slideIndex-1].className += " active";
+    if(slides.length){ slides[slideIndex-1].style.display="block"; }
+    if(dots.length){ dots[slideIndex-1].className += " active"; }
 }
-setInterval(()=>{ plusSlides(1); }, 6000);
 </script>
 </div>
 </body>
