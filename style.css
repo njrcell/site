@@ -18,9 +18,9 @@ header:after{content:"";position:absolute;inset:auto -10% -45% -10%;height:65%;b
 .hero-orb-one{width:240px;height:240px;left:-90px;top:-80px;background:radial-gradient(circle,rgba(57,255,20,.23),transparent 68%)}
 .hero-orb-two{width:260px;height:260px;right:-110px;bottom:-120px;background:radial-gradient(circle,rgba(57,255,20,.16),transparent 68%)}
 @keyframes floatLogo{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-.slideshow-container{position:relative;width:min(100%,900px);max-width:900px;margin:22px auto;overflow:hidden;border-radius:24px;border:1px solid rgba(57,255,20,.35);box-shadow:0 20px 70px rgba(0,0,0,.55),0 0 30px rgba(57,255,20,.09);background:#030504;display:block;text-align:center}
-.mySlides{display:none;animation:fade .8s;position:relative;width:100%;text-align:center}
-.mySlides img{display:block;width:100%;max-width:900px;height:auto;margin:0 auto;border-radius:24px;object-fit:contain;object-position:center center}
+.slideshow-container{position:relative;width:min(100%,900px);max-width:900px;aspect-ratio:16/9;margin:22px auto;overflow:hidden;border-radius:24px;border:1px solid rgba(57,255,20,.35);box-shadow:0 20px 70px rgba(0,0,0,.55),0 0 30px rgba(57,255,20,.09);background:#030504;display:block;text-align:center}
+.mySlides{display:none;animation:fade .8s;position:relative;width:100%;height:100%;aspect-ratio:16/9;text-align:center}
+.mySlides img{display:block;width:100%;height:100%;max-width:900px;margin:0 auto;border-radius:24px;object-fit:contain;object-position:center center;background:#030504}
 @keyframes fade{from{opacity:.25;transform:scale(1.02)}to{opacity:1;transform:scale(1)}}
 .prev,.next{cursor:pointer;position:absolute;top:50%;transform:translateY(-50%);padding:12px 15px;color:var(--neon);font-weight:bold;font-size:20px;border-radius:15px;user-select:none;background:rgba(2,7,3,.66);border:1px solid rgba(57,255,20,.35);backdrop-filter:blur(12px);box-shadow:0 0 18px rgba(57,255,20,.12);transition:.25s;z-index:2}
 .next{right:12px}.prev{left:12px}.prev:hover,.next:hover{transform:translateY(-50%) scale(1.07);box-shadow:0 0 25px rgba(57,255,20,.3)}
