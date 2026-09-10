@@ -107,3 +107,7 @@ header .logo{position:relative;z-index:1;filter:drop-shadow(0 0 10px rgba(57,255
 @keyframes mapPulse{0%,100%{opacity:.5;transform:translateY(0)}50%{opacity:1;transform:translateY(14px)}}
 @media(max-width:768px){#qrisImage{max-width:220px}.map-card:hover{transform:none}.map-image-link:after{opacity:1;transform:none;font-size:.62rem;padding:7px 9px}}
 @media(prefers-reduced-motion:reduce){.payment-right:before,.map-card:before{animation:none}.map-card:hover,#qrisImage:hover,.map-section .map-image-link:hover img{transform:none}}
+
+/* ===== TikTok logo repair ===== */
+footer .social-icons a:nth-child(2) img{content:url("https://cdn.simpleicons.org/tiktok/39ff14");object-fit:contain;display:inline-block}
+footer .social-icons a:nth-child(2) img:hover{content:url("https://cdn.simpleicons.org/tiktok/ffffff")}
