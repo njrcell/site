@@ -18,9 +18,9 @@ header:after{content:"";position:absolute;inset:auto -10% -45% -10%;height:65%;b
 .hero-orb-one{width:240px;height:240px;left:-90px;top:-80px;background:radial-gradient(circle,rgba(57,255,20,.23),transparent 68%)}
 .hero-orb-two{width:260px;height:260px;right:-110px;bottom:-120px;background:radial-gradient(circle,rgba(57,255,20,.16),transparent 68%)}
 @keyframes floatLogo{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-.slideshow-container{position:relative;width:min(100%,900px);max-width:900px;aspect-ratio:16/9;margin:22px auto;overflow:hidden;border-radius:24px;border:1px solid rgba(57,255,20,.35);box-shadow:0 20px 70px rgba(0,0,0,.55),0 0 30px rgba(57,255,20,.09);background:#030504;display:block;text-align:center}
-.mySlides{display:none;animation:fade .8s;position:relative;width:100%;height:100%;aspect-ratio:16/9;text-align:center}
-.mySlides img{display:block;width:100%;height:100%;max-width:900px;margin:0 auto;border-radius:24px;object-fit:contain;object-position:center center;background:#030504}
+.slideshow-container{position:relative;width:min(100%,900px);max-width:900px;margin:22px auto;overflow:hidden;border-radius:24px;border:1px solid rgba(57,255,20,.35);box-shadow:0 20px 70px rgba(0,0,0,.55),0 0 30px rgba(57,255,20,.09);background:#030504;display:block;text-align:center}
+.mySlides{display:none;animation:fade .8s;position:relative;width:100%;text-align:center}
+.mySlides img{display:block;width:100%;max-width:900px;height:auto;margin:0 auto;border-radius:24px;object-fit:contain;object-position:center center}
 @keyframes fade{from{opacity:.25;transform:scale(1.02)}to{opacity:1;transform:scale(1)}}
 .prev,.next{cursor:pointer;position:absolute;top:50%;transform:translateY(-50%);padding:12px 15px;color:var(--neon);font-weight:bold;font-size:20px;border-radius:15px;user-select:none;background:rgba(2,7,3,.66);border:1px solid rgba(57,255,20,.35);backdrop-filter:blur(12px);box-shadow:0 0 18px rgba(57,255,20,.12);transition:.25s;z-index:2}
 .next{right:12px}.prev{left:12px}.prev:hover,.next:hover{transform:translateY(-50%) scale(1.07);box-shadow:0 0 25px rgba(57,255,20,.3)}
@@ -77,3 +77,19 @@ footer{text-align:center;padding:34px 12px;background:linear-gradient(180deg,#07
 @media(max-width:768px){.site-wrapper{padding:0 12px}.payment-section{gap:14px}.payment-section>div{padding:20px;max-width:none}.rekening-item{grid-template-columns:88px 1fr auto;font-size:13px}.rekening-item .nomor{font-size:12px}.menu-grid{grid-template-columns:1fr}.services .menu-grid > .btn:nth-child(11),.services .menu-grid > .btn:nth-child(12),.offline-section .menu-grid > .btn:nth-child(6),.offline-section .menu-grid > .btn:nth-child(7),.offline-section .menu-grid > .btn:nth-child(8){grid-column:auto;transform:none}.slideshow-container{width:100%;border-radius:18px}.mySlides img{border-radius:18px}header{margin:0 -12px 18px;padding:42px 14px 34px}.logo{width:155px;max-width:155px}}
 @media(max-width:480px){h1{font-size:2.2rem}.rekening-item{grid-template-columns:78px 1fr auto;column-gap:8px}.rekening-item .nomor{font-size:11px}.copy-btn{padding:7px 8px}.price-section{padding:18px}.price-embed{min-height:420px;height:62vh}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* ===== NJR CELL V2 – Cyber Glass 2026 ===== */
+header{box-shadow:inset 0 -1px 0 rgba(57,255,20,.12),0 18px 70px rgba(0,0,0,.28)}
+header:before{content:"";position:absolute;left:50%;top:38px;width:min(260px,62vw);height:min(260px,62vw);transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(57,255,20,.15) 0 15%,rgba(57,255,20,.05) 30%,transparent 62%);border:1px solid rgba(57,255,20,.16);box-shadow:0 0 35px rgba(57,255,20,.1),inset 0 0 35px rgba(57,255,20,.08);z-index:-1;animation:cyberCore 4s ease-in-out infinite}
+header h1{position:relative;text-shadow:0 0 8px rgba(57,255,20,.78),0 0 28px rgba(57,255,20,.34);animation:cyberTitle 2.8s ease-in-out infinite}
+header p{position:relative;max-width:820px;margin:12px auto 0;color:#c2d2c3;animation:cyberTextIn .9s ease both}
+header .logo{position:relative;z-index:1;filter:drop-shadow(0 0 10px rgba(57,255,20,.3));box-shadow:0 0 26px rgba(57,255,20,.25),0 18px 50px rgba(0,0,0,.6),inset 0 0 18px rgba(57,255,20,.06)}
+.cyber-chip{display:inline-block;margin-top:16px;padding:8px 14px;border:1px solid rgba(57,255,20,.3);border-radius:999px;background:rgba(57,255,20,.05);color:var(--neon);font-size:.72rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase;box-shadow:0 0 18px rgba(57,255,20,.08);animation:chipPulse 3s ease-in-out infinite}
+@keyframes cyberCore{0%,100%{opacity:.72;transform:translateX(-50%) scale(.98) rotate(0deg)}50%{opacity:1;transform:translateX(-50%) scale(1.03) rotate(4deg)}}
+@keyframes cyberTitle{0%,100%{filter:brightness(1)}50%{filter:brightness(1.14)}}
+@keyframes cyberTextIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes chipPulse{0%,100%{box-shadow:0 0 12px rgba(57,255,20,.05)}50%{box-shadow:0 0 24px rgba(57,255,20,.16)}}
+.slideshow-container{box-shadow:0 20px 70px rgba(0,0,0,.58),0 0 38px rgba(57,255,20,.11)}
+.slideshow-container:after{content:"";position:absolute;left:4%;right:4%;bottom:8px;height:3px;background:rgba(255,255,255,.08);border-radius:999px;pointer-events:none;z-index:3}
+@media(max-width:768px){header:before{top:30px}.cyber-chip{font-size:.65rem;padding:7px 11px}}
+@media(prefers-reduced-motion:reduce){header:before,header h1,header p,.cyber-chip{animation:none!important}}
