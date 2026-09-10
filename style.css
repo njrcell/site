@@ -88,8 +88,22 @@ header .logo{position:relative;z-index:1;filter:drop-shadow(0 0 10px rgba(57,255
 @keyframes cyberCore{0%,100%{opacity:.72;transform:translateX(-50%) scale(.98) rotate(0deg)}50%{opacity:1;transform:translateX(-50%) scale(1.03) rotate(4deg)}}
 @keyframes cyberTitle{0%,100%{filter:brightness(1)}50%{filter:brightness(1.14)}}
 @keyframes cyberTextIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-@keyframes chipPulse{0%,100%{box-shadow:0 0 12px rgba(57,255,20,.05)}50%{box-shadow:0 0 24px rgba(57,255,20,.16)}}
-.slideshow-container{box-shadow:0 20px 70px rgba(0,0,0,.58),0 0 38px rgba(57,255,20,.11)}
-.slideshow-container:after{content:"";position:absolute;left:4%;right:4%;bottom:8px;height:3px;background:rgba(255,255,255,.08);border-radius:999px;pointer-events:none;z-index:3}
-@media(max-width:768px){header:before{top:30px}.cyber-chip{font-size:.65rem;padding:7px 11px}}
-@media(prefers-reduced-motion:reduce){header:before,header h1,header p,.cyber-chip{animation:none!important}}
+
+/* ===== V2 NEXT: Holographic QRIS + Interactive Outlet Cards ===== */
+.payment-right{position:relative;overflow:hidden;isolation:isolate}
+.payment-right:before{content:"";position:absolute;inset:-35% -20%;background:conic-gradient(from 0deg,transparent 0 18%,rgba(57,255,20,.08) 22%,transparent 30% 52%,rgba(168,255,138,.06) 58%,transparent 66% 100%);animation:holoSpin 12s linear infinite;z-index:-1}
+.payment-right:after{content:"";position:absolute;inset:10px;border:1px solid rgba(57,255,20,.08);border-radius:18px;pointer-events:none}
+#qrisImage{position:relative;display:block;margin:12px auto 0;padding:10px;border-radius:22px;background:rgba(255,255,255,.96);border:1px solid rgba(57,255,20,.55);box-shadow:0 0 0 1px rgba(57,255,20,.08),0 0 24px rgba(57,255,20,.18),0 18px 38px rgba(0,0,0,.45);transition:transform .3s,box-shadow .3s;z-index:1}
+#qrisImage:hover{transform:translateY(-4px) scale(1.015);box-shadow:0 0 0 1px rgba(57,255,20,.16),0 0 34px rgba(57,255,20,.3),0 22px 44px rgba(0,0,0,.5)}
+.map-card{position:relative;overflow:hidden;transition:transform .3s,border-color .3s,box-shadow .3s}
+.map-card:before{content:"";position:absolute;left:-20%;right:-20%;top:-60%;height:90%;background:radial-gradient(circle,rgba(57,255,20,.12),transparent 65%);pointer-events:none;animation:mapPulse 5s ease-in-out infinite}
+.map-card:hover{transform:perspective(1100px) rotateX(1.2deg) rotateY(-1.2deg) translateY(-4px);border-color:rgba(57,255,20,.42);box-shadow:0 24px 60px rgba(0,0,0,.45),0 0 28px rgba(57,255,20,.14),inset 0 0 40px rgba(57,255,20,.045)}
+.map-image-link{position:relative;z-index:1;overflow:hidden;border-radius:18px}
+.map-image-link:after{content:"BUKA DI GOOGLE MAPS ↗";position:absolute;left:12px;right:12px;bottom:12px;padding:8px 10px;border-radius:999px;background:rgba(3,8,4,.72);border:1px solid rgba(57,255,20,.26);backdrop-filter:blur(8px);color:var(--neon);font-size:.68rem;font-weight:900;letter-spacing:.08em;opacity:0;transform:translateY(8px);transition:.25s;pointer-events:none}
+.map-image-link:hover:after{opacity:1;transform:translateY(0)}
+.map-section .map-image-link img{transition:transform .5s,filter .5s}
+.map-section .map-image-link:hover img{transform:scale(1.025);filter:brightness(1.07) saturate(1.04)}
+@keyframes holoSpin{to{transform:rotate(360deg)}}
+@keyframes mapPulse{0%,100%{opacity:.5;transform:translateY(0)}50%{opacity:1;transform:translateY(14px)}}
+@media(max-width:768px){#qrisImage{max-width:220px}.map-card:hover{transform:none}.map-image-link:after{opacity:1;transform:none;font-size:.62rem;padding:7px 9px}}
+@media(prefers-reduced-motion:reduce){.payment-right:before,.map-card:before{animation:none}.map-card:hover,#qrisImage:hover,.map-section .map-image-link:hover img{transform:none}}
