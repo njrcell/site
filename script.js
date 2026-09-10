@@ -156,4 +156,34 @@ if (qrisBtn) {
     });
     slider.addEventListener('pointercancel', () => { tracking = false; });
   });
+
+  // ===== Cyber Glass 3D Command Center =====
+  const commandStyle = document.createElement('style');
+  commandStyle.textContent = `
+    .services{position:relative;overflow:hidden}
+    .services::before{content:"";position:absolute;inset:18% -15% auto;width:130%;height:55%;background:radial-gradient(ellipse,rgba(57,255,20,.06),transparent 68%);pointer-events:none}
+    .menu-grid{perspective:1200px}
+    .menu-grid>.btn{position:relative;overflow:hidden;min-height:66px;transform-style:preserve-3d;will-change:transform,box-shadow;border-color:rgba(57,255,20,.28)}
+    .menu-grid>.btn::before{content:"";position:absolute;inset:-30%;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.08) 49%,transparent 62%);transform:translateX(-70%) rotate(8deg);transition:transform .65s ease;pointer-events:none}
+    .menu-grid>.btn::after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(135deg,rgba(57,255,20,.08),transparent 38%,rgba(168,255,138,.035));opacity:.6;pointer-events:none}
+    .menu-grid>.btn:hover::before{transform:translateX(70%) rotate(8deg)}
+    .menu-grid>.btn span{position:relative;z-index:2;transform:translateZ(18px);transition:transform .25s ease,filter .25s ease}
+    .menu-grid>.btn:hover span{transform:translateZ(28px) scale(1.03)}
+    .menu-grid>.btn:nth-child(3n+1):hover{box-shadow:0 22px 36px rgba(0,0,0,.45),0 0 26px rgba(57,255,20,.20),inset 0 0 22px rgba(57,255,20,.035)}
+    .menu-grid>.btn:nth-child(3n+2):hover{box-shadow:0 22px 36px rgba(0,0,0,.45),0 0 26px rgba(57,255,20,.16),inset 0 0 22px rgba(57,255,20,.045)}
+    .menu-grid>.btn:nth-child(3n+3):hover{box-shadow:0 22px 36px rgba(0,0,0,.45),0 0 26px rgba(57,255,20,.24),inset 0 0 22px rgba(57,255,20,.04)}
+    .command-hint{margin:10px auto 0;color:#849786;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;opacity:.78}
+    @media(max-width:768px){.menu-grid>.btn{min-height:60px}.command-hint{font-size:.62rem}.menu-grid>.btn:hover span{transform:none}}
+    @media(prefers-reduced-motion:reduce){.menu-grid>.btn,.menu-grid>.btn span{transform:none!important}.menu-grid>.btn::before{display:none}}
+  `;
+  document.head.appendChild(commandStyle);
+
+  const services = document.querySelector('.services');
+  const menuGrid = services ? services.querySelector('.menu-grid') : null;
+  if (menuGrid && !services.querySelector('.command-hint')) {
+    const hint = document.createElement('div');
+    hint.className = 'command-hint';
+    hint.textContent = 'CYBER COMMAND CENTER • Pilih layanan untuk melanjutkan';
+    menuGrid.insertAdjacentElement('afterend', hint);
+  }
 })();
