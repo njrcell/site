@@ -111,3 +111,9 @@ header .logo{position:relative;z-index:1;filter:drop-shadow(0 0 10px rgba(57,255
 /* ===== TikTok logo repair ===== */
 footer .social-icons a:nth-child(2) img{content:url("https://cdn.simpleicons.org/tiktok/39ff14");object-fit:contain;display:inline-block}
 footer .social-icons a:nth-child(2) img:hover{content:url("https://cdn.simpleicons.org/tiktok/ffffff")}
+
+/* ===== Slideshow Uniform Size Fix ===== */
+.slideshow-container{aspect-ratio:16/9;height:auto;max-height:none}
+.mySlides{height:100%;min-height:0}
+.mySlides img{width:100%;height:100%;max-width:none;object-fit:cover;object-position:center center}
+@media(max-width:768px){.slideshow-container{aspect-ratio:16/9}.mySlides img{width:100%;height:100%;object-fit:cover;object-position:center center}}
