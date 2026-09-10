@@ -1,6 +1,5 @@
 // Script tombol Copy rekening/e-wallet
 document.querySelectorAll('.copy-btn').forEach(btn => {
-  // Supaya tidak bentrok dengan tombol Download QRIS
   if (btn.id !== "downloadQRIS") {
     btn.addEventListener('click', () => {
       const text = btn.getAttribute('data-text');
@@ -97,4 +96,64 @@ if (qrisBtn) {
     magneticStyle.textContent = '.btn:hover{translate:var(--mx,0) var(--my,0)}';
     document.head.appendChild(magneticStyle);
   }
+
+  // ===== Cyber Glass Interactive Carousel =====
+  window.addEventListener('load', () => {
+    const slider = document.querySelector('.slideshow-container');
+    if (!slider) return;
+
+    const progress = document.createElement('div');
+    progress.className = 'slide-progress';
+    progress.setAttribute('aria-hidden', 'true');
+    slider.appendChild(progress);
+
+    const carouselStyle = document.createElement('style');
+    carouselStyle.textContent = `
+      .slideshow-container{touch-action:pan-y;cursor:grab}
+      .slideshow-container:active{cursor:grabbing}
+      .slide-progress{position:absolute;left:3%;bottom:8px;width:94%;height:3px;border-radius:999px;background:rgba(255,255,255,.14);overflow:hidden;z-index:5;pointer-events:none}
+      .slide-progress::after{content:"";display:block;width:0;height:100%;border-radius:inherit;background:var(--neon);box-shadow:0 0 10px rgba(57,255,20,.65);transition:none}
+      .slide-progress.running::after{width:100%;transition:width 5s linear}
+      @media(max-width:768px){.slide-progress{bottom:6px;height:2px}}
+      @media(prefers-reduced-motion:reduce){.slide-progress.running::after{transition:none}}
+    `;
+    document.head.appendChild(carouselStyle);
+
+    const progressBar = progress;
+    const resetProgress = () => {
+      progressBar.classList.remove('running');
+      void progressBar.offsetWidth;
+      progressBar.classList.add('running');
+    };
+
+    if (typeof window.showSlides === 'function') {
+      const originalShowSlides = window.showSlides;
+      window.showSlides = function(n) {
+        const result = originalShowSlides.call(this, n);
+        resetProgress();
+        return result;
+      };
+      resetProgress();
+    }
+
+    let startX = 0;
+    let startY = 0;
+    let tracking = false;
+    slider.addEventListener('pointerdown', e => {
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      startX = e.clientX;
+      startY = e.clientY;
+      tracking = true;
+    });
+    slider.addEventListener('pointerup', e => {
+      if (!tracking) return;
+      tracking = false;
+      const dx = e.clientX - startX;
+      const dy = e.clientY - startY;
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.25 && typeof window.plusSlides === 'function') {
+        window.plusSlides(dx < 0 ? 1 : -1);
+      }
+    });
+    slider.addEventListener('pointercancel', () => { tracking = false; });
+  });
 })();
