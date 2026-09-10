@@ -186,4 +186,90 @@ if (qrisBtn) {
     hint.textContent = 'CYBER COMMAND CENTER • Pilih layanan untuk melanjutkan';
     menuGrid.insertAdjacentElement('afterend', hint);
   }
+
+  // ===== Cyber Glass Scroll Experience =====
+  const scrollStyle = document.createElement('style');
+  scrollStyle.textContent = `
+    .cyber-reveal{opacity:0;transform:translateY(28px) scale(.985);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1);}
+    .cyber-reveal.cyber-visible{opacity:1;transform:none}
+    .cyber-reveal[data-delay="1"]{transition-delay:.08s}
+    .cyber-reveal[data-delay="2"]{transition-delay:.16s}
+    .cyber-reveal[data-delay="3"]{transition-delay:.24s}
+    .cyber-parallax{transform:translate3d(0,var(--parallax-y,0px),0);will-change:transform}
+    .cyber-scanline{position:relative;overflow:hidden}
+    .cyber-scanline::after{content:"";position:absolute;left:-25%;top:0;width:22%;height:100%;background:linear-gradient(90deg,transparent,rgba(57,255,20,.09),transparent);transform:skewX(-18deg);animation:cyberScan 7s ease-in-out infinite;pointer-events:none}
+    @keyframes cyberScan{0%,65%{left:-25%;opacity:0}72%{opacity:1}100%{left:110%;opacity:0}}
+    @media(prefers-reduced-motion:reduce){.cyber-reveal{opacity:1;transform:none;transition:none}.cyber-parallax{transform:none!important}.cyber-scanline::after{display:none}}
+  `;
+  document.head.appendChild(scrollStyle);
+
+  const revealTargets = [
+    '.payment-section',
+    '.services',
+    '.offline-section',
+    '.map-section',
+    '.price-section',
+    'footer'
+  ];
+  let revealIndex = 0;
+  revealTargets.forEach(selector => {
+    document.querySelectorAll(selector).forEach(el => {
+      if (el.classList.contains('cyber-reveal')) return;
+      el.classList.add('cyber-reveal');
+      el.dataset.delay = String(revealIndex % 4);
+      revealIndex += 1;
+      el.classList.add('cyber-scanline');
+    });
+  });
+
+  const canObserve = 'IntersectionObserver' in window;
+  if (canObserve) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('cyber-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -6% 0px'});
+    document.querySelectorAll('.cyber-reveal').forEach(el => observer.observe(el));
+  } else {
+    document.querySelectorAll('.cyber-reveal').forEach(el => el.classList.add('cyber-visible'));
+  }
+
+  const parallaxTargets = [
+    '.hero-orb-one',
+    '.hero-orb-two',
+    '.cyber-core',
+    '.slideshow-container'
+  ];
+  const parallaxEls = parallaxTargets.flatMap(selector => Array.from(document.querySelectorAll(selector)));
+  let ticking = false;
+  const updateParallax = () => {
+    ticking = false;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const scrollY = window.scrollY || window.pageYOffset || 0;
+    parallaxEls.forEach((el, index) => {
+      const speed = index === 3 ? 0.035 : (index === 2 ? -0.045 : 0.02);
+      const shift = Math.max(-18, Math.min(18, scrollY * speed));
+      el.style.setProperty('--parallax-y', `${shift.toFixed(1)}px`);
+      if (el.classList.contains('cyber-parallax')) el.style.transform = `translate3d(0,${shift.toFixed(1)}px,0)`;
+    });
+  };
+  parallaxEls.forEach(el => el.classList.add('cyber-parallax'));
+  updateParallax();
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(updateParallax);
+    }
+  }, {passive:true});
+
+  document.querySelectorAll('.btn,.map-image-link,#downloadQRIS').forEach(el => {
+    el.addEventListener('focus', () => el.classList.add('cyber-focus'));
+    el.addEventListener('blur', () => el.classList.remove('cyber-focus'));
+  });
+  const focusStyle = document.createElement('style');
+  focusStyle.textContent = '.cyber-focus{outline:2px solid var(--neon);outline-offset:3px;box-shadow:0 0 0 4px rgba(57,255,20,.08),0 0 24px rgba(57,255,20,.22)!important}';
+  document.head.appendChild(focusStyle);
 })();
