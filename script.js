@@ -183,7 +183,7 @@ if (qrisBtn) {
   if (menuGrid && !services.querySelector('.command-hint')) {
     const hint = document.createElement('div');
     hint.className = 'command-hint';
-    hint.textContent = 'CYBER COMMAND CENTER • Pilih layanan untuk melanjutkan';
+    hint.textContent = 'Semua Produk Tidak kita Tampilkan jadi jika tidak menemukan produk digital yang dicari silahkan chat kami • Pilih layanan untuk melanjutkan';
     menuGrid.insertAdjacentElement('afterend', hint);
   }
 
